@@ -17,7 +17,7 @@ export default function SkillIcon({ name, className = "w-6 h-6" }: SkillIconProp
 
         // Web Development
         'HTML5': '/Html.webp',
-        'CSS3': '/CSS#.webp',
+        'CSS3': '/CSS.webp',
         'React.js (Basics)': '/React.webp',
         'Bootstrap': '/Bootstrap.png',
         'Tailwind CSS (Basics)': '/Tailwindcss.webp',
