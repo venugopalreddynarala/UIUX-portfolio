@@ -69,7 +69,7 @@ const projects = [
             'Average response time under 200ms',
             'Successfully identified 98% of zero-day phishing attempts'
         ],
-        github: 'https://github.com/pchaitanya921',
+        github: 'https://github.com/pchaitanya921/cyberguard-phishing-detection.git',
         demo: ''
     },
     {
