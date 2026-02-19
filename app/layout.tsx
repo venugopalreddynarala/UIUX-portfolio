@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 import BackgroundAnimation from "@/components/BackgroundAnimation";
 import AnimatedGradient from "@/components/AnimatedGradient";
@@ -20,13 +19,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-    title: "Lakshmi Chaitanya Sai - Student & Aspiring Product Designer",
-    description: "Building secure, human-centered digital experiences. UI/UX • Frontend • Python Backend • Cybersecurity",
-    keywords: ["UI/UX Design", "Frontend Development", "Cybersecurity", "Product Design", "Python Backend", "Student Portfolio"],
-    authors: [{ name: "Lakshmi Chaitanya Sai" }],
+    title: "Kamireddy Nanda Kishore Reddy - Portfolio",
+    description: "Portfolio of Kamireddy Nanda Kishore Reddy, Computer Science (AI & Data Science) Student.",
+    keywords: ["AI", "Data Science", "Computer Science", "Portfolio", "Student", "Kamireddy Nanda Kishore Reddy"],
+    authors: [{ name: "Kamireddy Nanda Kishore Reddy" }],
     openGraph: {
-        title: "Lakshmi Chaitanya Sai - Student & Aspiring Product Designer",
-        description: "Building secure, human-centered digital experiences.",
+        title: "Kamireddy Nanda Kishore Reddy - Portfolio",
+        description: "Portfolio of Kamireddy Nanda Kishore Reddy, Computer Science (AI & Data Science) Student.",
         type: "website",
     },
 };
@@ -41,7 +40,6 @@ export default function RootLayout({
             <body suppressHydrationWarning>
                 <BackgroundAnimation />
                 <AnimatedGradient />
-                <CustomCursor />
                 <SmoothScroll>
                     {children}
                 </SmoothScroll>

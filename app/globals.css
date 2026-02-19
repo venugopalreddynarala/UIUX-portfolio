@@ -31,7 +31,7 @@ body {
   color: var(--color-offwhite);
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
-  cursor: none;
+  /* cursor: none; Removed to restore default cursor */
 }
 
 /* Headings with Space Grotesk Font */
@@ -45,26 +45,6 @@ h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
   font-style: italic;
-}
-
-/* Custom Cursor Styles */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--color-electric);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.custom-cursor.hover {
-  width: 60px;
-  height: 60px;
 }
 
 /* Glassmorphism Utilities */
@@ -153,16 +133,6 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-electric-light);
-}
-
-/* Hide scrollbar for custom cursor experience */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 /* Modal Animations */

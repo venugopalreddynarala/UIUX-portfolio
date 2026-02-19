@@ -56,35 +56,42 @@ export default function About() {
 
                 <div className="space-y-6 text-lg md:text-xl text-offwhite/90 leading-relaxed">
                     <p className="about-line">
-                        Cybersecurity-focused{' '}
-                        <span className="text-electric font-semibold">B.Tech Computer Science & Engineering (Cyber Security)</span>{' '}
-                        final-year student with{' '}
-                        <span className="text-violet font-semibold">CEH v13 certification</span>{' '}
-                        and hands-on experience in secure application development and cybersecurity-driven projects. Possesses a strong foundation in{' '}
-                        <span className="text-electric font-semibold">ethical hacking</span>,{' '}
-                        <span className="text-electric font-semibold">web application security</span>,{' '}
-                        <span className="text-violet font-semibold">network security fundamentals</span>, and{' '}
-                        <span className="text-violet font-semibold">defensive security practices</span>, with practical exposure to identifying and mitigating real-world cyber threats.
+                        Hello, I’m <span className="text-electric font-semibold">K. Nanda Kishore Reddy</span>, a final-year B.Tech student specializing in <span className="text-violet font-semibold">Artificial Intelligence & Data Science</span> at Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology.
                     </p>
                     <p className="about-line">
-                        Skilled in web development using{' '}
-                        <span className="text-electric font-semibold">HTML, CSS, JavaScript</span>, and{' '}
-                        <span className="text-electric font-semibold">React.js (Basics)</span>, along with{' '}
-                        <span className="text-violet font-semibold">Python-based backend logic</span>{' '}
-                        and{' '}
-                        <span className="text-violet font-semibold">MongoDB</span>{' '}
-                        for data handling. Experienced in designing user-friendly and secure digital interfaces through{' '}
-                        <span className="text-electric font-semibold">UI/UX principles</span>,{' '}
-                        <span className="text-electric font-semibold">wireframing</span>, and{' '}
-                        <span className="text-electric font-semibold">prototyping using Figma</span>, ensuring both usability and security are integrated into applications.
+                        I am passionate about building intelligent, scalable digital systems that combine <span className="text-electric font-semibold">AI, data analytics, and full-stack development</span>. My work focuses on transforming real-world problems into practical, technology-driven solutions — from deep learning–based medical image analysis to fraud detection systems and interactive AI applications.
                     </p>
-                    <p className="about-line">
-                        Worked on{' '}
-                        <span className="text-violet font-semibold">AI-driven phishing simulation and detection systems</span>, analyzing user behavior, phishing patterns, and intrusion indicators to improve security awareness and threat detection. Demonstrated strong{' '}
-                        <span className="text-electric font-semibold">analytical, problem-solving, and reporting skills</span>{' '}
-                        through dashboards, monitoring systems, and security logs. Actively seeking entry-level roles in{' '}
-                        <span className="text-violet font-semibold">cybersecurity, SOC operations, IT security, or secure web application development</span>, where technical skills and a security-first mindset can contribute to organizational resilience.
-                    </p>
+                </div>
+
+                <div className="mt-12 space-y-6">
+                    <h3 className="about-line text-3xl font-bold text-offwhite mb-6">Education</h3>
+
+                    <div className="about-line glass p-6 rounded-2xl border border-electric/20">
+                        <div className="flex flex-col md:flex-row justify-between mb-2">
+                            <h4 className="text-xl font-bold text-electric">Bachelor of Technology in CS (AI & Data Science)</h4>
+                            <span className="text-mutedgray">2022 – 2026</span>
+                        </div>
+                        <p className="text-lg text-offwhite/90">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</p>
+                        <p className="text-mutedgray mt-1">CGPA: 8.2</p>
+                    </div>
+
+                    <div className="about-line glass p-6 rounded-2xl border border-violet/20">
+                        <div className="flex flex-col md:flex-row justify-between mb-2">
+                            <h4 className="text-xl font-bold text-violet">Sri Saraswathi Junior College</h4>
+                            <span className="text-mutedgray">2022</span>
+                        </div>
+                        <p className="text-lg text-offwhite/90">Board of Intermediate Education, Andhra Pradesh</p>
+                        <p className="text-mutedgray mt-1">Percentage: 83%</p>
+                    </div>
+
+                    <div className="about-line glass p-6 rounded-2xl border border-electric/20">
+                        <div className="flex flex-col md:flex-row justify-between mb-2">
+                            <h4 className="text-xl font-bold text-electric">Sri Mallikarjuna High School</h4>
+                            <span className="text-mutedgray">2020</span>
+                        </div>
+                        <p className="text-lg text-offwhite/90">Board of Secondary Education, Andhra Pradesh</p>
+                        <p className="text-mutedgray mt-1">Percentage: 100%</p>
+                    </div>
                 </div>
 
                 {/* Abstract visual element */}

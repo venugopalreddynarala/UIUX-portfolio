@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, Search, Lock } from 'lucide-react';
+import { Shield, Search, Lock, Activity, MousePointer, CreditCard, Box } from 'lucide-react';
 import GlassCard from '@/components/GlassCard';
 import ProjectModal from '@/components/ProjectModal';
 
@@ -11,96 +11,142 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        title: 'AI-Driven Phishing Simulator & Awareness Training System',
-        impact: 'Reduced phishing susceptibility by 67% through adaptive training',
-        tech: ['Python', 'Machine Learning', 'Flask', 'React', 'PostgreSQL'],
+        title: 'AI-Powered X-Ray Visualization and Pneumonia Detection',
+        impact: 'Automated pneumonia detection with visual explainability',
+        tech: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Flask'],
+        gradient: 'from-electric to-violet',
+        icon: Activity,
+        image: '/pneumonia_detection.jpg', // Placeholder for now, can be updated later
+        description: 'Designed and deployed an end-to-end AI product to detect pneumonia from chest X-ray images using deep learning. Integrated Grad-CAM explainability to generate visual heatmaps for clinical interpretation.',
+        features: [
+            'End-to-end AI pipeline for X-ray analysis',
+            'Deep learning model for pneumonia detection',
+            'Grad-CAM integration for visual heatmaps',
+            'Flask-based web application for real-time predictions',
+            'Real-time image uploads and processing'
+        ],
+        challenges: [
+            'Improving model accuracy on diverse datasets',
+            'Implementing Grad-CAM for transparent model decisions',
+            'Optimizing inference time for real-time usage'
+        ],
+        results: [
+            'Successfully detected pneumonia from X-ray images',
+            'Provided visual heatmaps for clinical interpretation',
+            'Deployed as a real-time web application'
+        ],
+        github: '',
+        demo: ''
+    },
+    {
+        title: 'Smart Cursor Control System',
+        impact: 'Hands-free cursor control for differently-abled users',
+        tech: ['Python', 'OpenCV', 'MediaPipe'],
+        gradient: 'from-violet to-electric',
+        icon: MousePointer,
+        image: '/cursor_control.jpg', // Placeholder
+        description: 'Developed an AI-driven human-computer interaction system enabling hands-free cursor control through facial landmark tracking. Translated real-time video input into system-level actions using computer vision.',
+        features: [
+            'Facial landmark tracking for cursor movement',
+            'Hands-free interaction for differently-abled users',
+            'Real-time video processing',
+            'System-level action translation (click, scroll)'
+        ],
+        challenges: [
+            'Ensuring precise cursor control via facial movements',
+            'Minimizing latency in video processing',
+            'Handling different lighting conditions'
+        ],
+        results: [
+            'Enabled hands-free computer control',
+            'High accuracy in facial tracking',
+            'Strong alignment with XR/immersive interaction systems'
+        ],
+        github: '',
+        demo: ''
+    },
+    {
+        title: 'Intelligent Payment Fraud Detection System',
+        impact: 'Detects fraudulent transactions using ML',
+        tech: ['Python', 'Scikit-learn', 'Pandas'],
+        gradient: 'from-electric to-violet',
+        icon: CreditCard,
+        image: '/fraud_detection.jpg', // Placeholder
+        description: 'Built a machine learning pipeline to detect fraudulent financial transactions using classification algorithms. Implemented data preprocessing, feature engineering, and performance evaluation to improve model accuracy and reduce false positives.',
+        features: [
+            'ML pipeline for fraud detection',
+            'Data preprocessing and feature engineering',
+            'Classification algorithms for transaction analysis',
+            'Performance evaluation metrics'
+        ],
+        challenges: [
+            'Handling imbalanced datasets',
+            'Reducing false positives while maintaining high detection rate',
+            'Optimizing feature selection for model performance'
+        ],
+        results: [
+            'Improved model accuracy',
+            'Reduced false positives',
+            'Effective detection of fraudulent patterns'
+        ],
+        github: '',
+        demo: ''
+    },
+    {
+        title: 'Inventory Management Web Application',
+        impact: 'Role-based inventory and user management',
+        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+        gradient: 'from-violet to-electric',
+        icon: Box,
+        image: '/inventory_management.jpg', // Placeholder
+        description: 'Developed a full-stack digital product with role-based authentication and complete CRUD operations for managing inventory and users. Designed responsive UI and integrated backend database for real-time updates.',
+        features: [
+            'Role-based authentication system',
+            'Complete CRUD operations for inventory',
+            'User management functionality',
+            'Responsive UI design',
+            'Real-time database updates'
+        ],
+        challenges: [
+            'Implementing secure role-based access control',
+            'Ensuring data consistency across real-time updates',
+            'Designing a user-friendly responsive interface'
+        ],
+        results: [
+            'Streamlined inventory management process',
+            'Secure user authentication and role management',
+            'Efficient real-time data handling'
+        ],
+        github: '',
+        demo: ''
+    },
+    {
+        title: 'AttendEase – Role-Based Employee Attendance Management System',
+        impact: 'Secure MERN stack attendance tracking with analytics',
+        tech: ['React', 'Redux', 'Node.js', 'Express', 'MongoDB'],
         gradient: 'from-electric to-violet',
         icon: Shield,
-        image: '/phishing_simulator_mockup_1770194846154.png',
-        description: 'An intelligent cybersecurity training platform that uses AI to create realistic phishing scenarios and adapts training difficulty based on user performance. The system provides personalized feedback and tracks improvement over time.',
+        image: '/attendease.jpg', // Placeholder
+        description: 'Developed a full-stack role-based Employee Attendance System using the MERN stack. Designed to digitally manage employee attendance with support for Employee and Manager roles. Managers can monitor team performance, generate reports, and export CSV files, while employees can mark daily attendance and view summaries.',
         features: [
-            'AI-powered phishing email generation with realistic templates',
-            'Adaptive difficulty system that adjusts based on user performance',
-            'Real-time analytics dashboard for tracking training effectiveness',
-            'Personalized learning paths for different user skill levels',
-            'Integration with email systems for seamless deployment',
-            'Comprehensive reporting and compliance tracking'
+            'Role-Based Access Control (Employee & Manager)',
+            'Secure JWT Authentication & bcryptjs hashing',
+            'Attendance Trend Analysis & Visualizations',
+            'CSV Report Generation for Managers',
+            'Real-time Dashboard with Recharts',
+            'Protected Routes & Middleware'
         ],
         challenges: [
-            'Developing realistic phishing scenarios without compromising security',
-            'Creating an adaptive algorithm that balances challenge and learning',
-            'Ensuring GDPR compliance while tracking user behavior',
-            'Building a scalable architecture to handle enterprise-level deployments'
+            'Implementing secure role-based access control and JWT auth',
+            'Optimizing MongoDB queries for attendance analytics',
+            'Designing dynamic dashboard visualizations for real-time monitoring'
         ],
         results: [
-            '67% reduction in phishing susceptibility across test groups',
-            '89% user engagement rate with training modules',
-            'Deployed across 5 organizations with 10,000+ users',
-            'Average training completion time reduced by 40%'
+            'Efficient digital attendance management',
+            'Secure and scalable authentication system',
+            'Actionable insights via data visualization and reports'
         ],
-        github: 'https://github.com/pchaitanya921',
-        demo: ''
-    },
-    {
-        title: 'Phishing Detection & Analysis System',
-        impact: 'Analyzed 26,000+ URLs with 94% accuracy using ML models',
-        tech: ['Python', 'TensorFlow', 'NLP', 'FastAPI', 'MongoDB'],
-        gradient: 'from-violet to-electric',
-        icon: Search,
-        image: '/phishing_detection_mockup_1770194895623.png',
-        description: 'A machine learning-powered system that analyzes URLs and email content to detect phishing attempts. Uses advanced NLP techniques and deep learning models to identify malicious patterns and protect users from cyber threats.',
-        features: [
-            'Real-time URL analysis with 94% accuracy',
-            'Natural Language Processing for email content analysis',
-            'Deep learning models trained on 26,000+ samples',
-            'RESTful API for easy integration with existing systems',
-            'Automated threat intelligence gathering',
-            'Visual similarity detection for brand impersonation'
-        ],
-        challenges: [
-            'Handling the constantly evolving nature of phishing techniques',
-            'Minimizing false positives while maintaining high accuracy',
-            'Processing large datasets efficiently for real-time analysis',
-            'Creating a robust feature extraction pipeline'
-        ],
-        results: [
-            '94% detection accuracy on test dataset',
-            'Processed 26,000+ URLs for training and validation',
-            'Average response time under 200ms',
-            'Successfully identified 98% of zero-day phishing attempts'
-        ],
-        github: 'https://github.com/pchaitanya921/cyberguard-phishing-detection.git',
-        demo: ''
-    },
-    {
-        title: 'USB Activity Monitoring System',
-        impact: 'Real-time threat detection with automated incident response',
-        tech: ['Python', 'System Programming', 'SQLite', 'Electron', 'React'],
-        gradient: 'from-electric to-violet',
-        icon: Lock,
-        image: '/usb_monitoring_mockup_1770194953508.png',
-        description: 'A comprehensive security monitoring solution that tracks USB device activity, detects unauthorized access, and provides automated incident response. Features a modern desktop interface built with Electron and React.',
-        features: [
-            'Real-time USB device monitoring and logging',
-            'Automated threat detection and alerting',
-            'Device whitelisting and blacklisting capabilities',
-            'Detailed activity logs with forensic analysis tools',
-            'Cross-platform desktop application (Windows, macOS, Linux)',
-            'Customizable security policies and rules'
-        ],
-        challenges: [
-            'Implementing low-level system hooks for device monitoring',
-            'Ensuring minimal performance impact on system resources',
-            'Creating a user-friendly interface for complex security features',
-            'Handling edge cases across different operating systems'
-        ],
-        results: [
-            '100% detection rate for unauthorized USB devices',
-            'Less than 2% CPU usage during active monitoring',
-            'Deployed in 3 enterprise environments',
-            'Average incident response time reduced to under 5 seconds'
-        ],
-        github: 'https://github.com/pchaitanya921',
+        github: '',
         demo: ''
     },
 ];
@@ -112,29 +158,19 @@ export default function Projects() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Parallax effect for project cards
+            // Simple fade-in animation for project cards
             gsap.utils.toArray<HTMLElement>('.project-card').forEach((card, index) => {
                 gsap.from(card, {
                     scrollTrigger: {
                         trigger: card,
-                        start: 'top 80%',
-                        end: 'bottom 20%',
-                        scrub: 1,
+                        start: 'top 85%', // Trigger slightly earlier
+                        toggleActions: 'play none none reverse', // Play once, reverse on scroll up
                     },
-                    y: 100,
-                    autoAlpha: 0,
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
                     clearProps: 'all',
-                });
-
-                // Parallax for project image placeholder
-                gsap.to(card.querySelector('.project-image'), {
-                    scrollTrigger: {
-                        trigger: card,
-                        start: 'top bottom',
-                        end: 'bottom top',
-                        scrub: 1,
-                    },
-                    y: -50,
                 });
             });
         }, sectionRef);
@@ -187,21 +223,21 @@ export default function Projects() {
                                                 </span>
                                             ))}
                                         </div>
-                                        <p className="text-electric text-sm font-semibold">
-                                            Click to view details →
-                                        </p>
+                                        <div className="flex items-center gap-2 text-electric text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                                            Click to view details <span className="text-lg">→</span>
+                                        </div>
                                     </div>
 
                                     {/* Project Visual */}
-                                    <div className="order-1 md:order-2 relative h-64 rounded-xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
+                                    <div className="order-1 md:order-2 relative h-64 rounded-xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(91,124,255,0.3)] transition-all duration-500">
                                         {/* Project Image */}
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
-                                        {/* Gradient Overlay */}
-                                        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 group-hover:opacity-5 transition-opacity mix-blend-overlay`} />
+                                        {/* Gradient Overlay - Reduced opacity for better visibility */}
+                                        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-10 transition-opacity mix-blend-overlay`} />
                                     </div>
                                 </div>
                             </GlassCard>

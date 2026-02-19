@@ -9,38 +9,59 @@ gsap.registerPlugin(ScrollTrigger);
 
 const certifications = [
     {
-        name: 'Certified Ethical Hacker (CEH)',
-        issuer: 'EC-Council',
-        year: 'Dec 2025',
+        name: 'AWS Academy Cloud Foundations',
+        issuer: 'AWS',
+        year: 'Graduate',
         highlight: true,
-        image: '/CEH_2E345519D3F7.png',
-        logo: '/CEA-logo.gif',
-        description: 'A comprehensive certification covering the latest ethical hacking tools, techniques, and methodologies used by information security professionals to lawfully hack an organization.',
-        skills: ['Penetration Testing', 'Network Scanning', 'Vulnerability Assessment', 'System Hacking', 'Social Engineering', 'Web App Security'],
-        credentialUrl: 'https://aspen.eccouncil.org/Verify',
-        credentialId: 'ECC7920413586'
+        image: '/aws_certificate.png', // Placeholder
+        logo: '/aws_logo.png', // Placeholder
+        description: 'Fundamental understanding of AWS Cloud concepts, security, architecture, pricing, and support.',
+        skills: ['Cloud Computing', 'AWS Services', 'Security', 'Architecture'],
+        credentialUrl: '',
     },
     {
-        name: 'Ethical Hacker',
-        issuer: 'Cisco Networking Academy',
-        year: 'Dec 2024',
+        name: 'Data Visualisation: Empowering Business with Effective Insights',
+        issuer: 'TATA',
+        year: 'Completed',
         highlight: false,
-        image: '/cisco-ethical-hacker-badge.png',
-        logo: '/cisco-logo.png',
-        description: 'Validates skills in offensive security, including understanding vectors of attack, using hacking tools, and implementing countermeasures to secure systems.',
-        skills: ['Network Security', 'Linux', 'Python for Security', 'Cryptography', 'Cyber Threats'],
-        credentialUrl: 'https://www.credly.com/badges/dbb1f538-116b-47c6-aea0-205543732198/public_url',
+        image: '/tata_certificate.png', // Placeholder
+        logo: '/tata_logo.png', // Placeholder
+        description: 'Virtual experience program covering data visualization concepts and tools for business insights.',
+        skills: ['Data Visualization', 'Business Insights', 'Dashboards'],
+        credentialUrl: '',
     },
     {
-        name: 'Introduction to Cybersecurity',
-        issuer: 'Cisco Networking Academy',
-        year: 'May 2024',
+        name: 'Python',
+        issuer: 'Simplilearn',
+        year: 'Completed',
         highlight: false,
-        image: '/cisco-intro-cybersecurity-badge.png',
-        logo: '/cisco-logo.png',
-        description: 'Foundational certification covering the basics of cybersecurity trends, threats, and staying safe in cyberspace, as well as protecting personal and company data.',
-        skills: ['Data Privacy', 'Network Protection', 'Security Policies', 'Threat Landscape', 'Digital Safety'],
-        credentialUrl: 'https://www.credly.com/badges/293995d3-b76c-4306-afcc-f48a7ab041f5/public_url',
+        image: '/simplilearn_python.png', // Placeholder
+        logo: '/simplilearn_logo.png', // Placeholder
+        description: 'Certification in Python programming language covering core concepts and libraries.',
+        skills: ['Python', 'Programming', 'Scripting'],
+        credentialUrl: '',
+    },
+    {
+        name: 'Data Science',
+        issuer: 'Wipro TalentNext',
+        year: 'Completed',
+        highlight: false,
+        image: '/wipro_datascience.png', // Placeholder
+        logo: '/wipro_logo.png', // Placeholder
+        description: 'Comprehensive program on Data Science methodologies and tools.',
+        skills: ['Data Science', 'Machine Learning', 'Analysis'],
+        credentialUrl: '',
+    },
+    {
+        name: 'Data Analytics Program',
+        issuer: 'Deloitte',
+        year: 'Completed',
+        highlight: false,
+        image: '/deloitte_analytics.png', // Placeholder
+        logo: '/deloitte_logo.png', // Placeholder
+        description: 'Virtual Internship program focusing on data analytics and consulting.',
+        skills: ['Data Analytics', 'Consulting', 'Problem Solving'],
+        credentialUrl: '',
     },
 ];
 

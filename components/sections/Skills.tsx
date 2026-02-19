@@ -10,41 +10,53 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
     {
-        category: 'Languages',
-        items: ['Python', 'Java', 'JavaScript (Basics)'],
+        category: 'Programming',
+        items: ['Python', 'Basic C'],
         color: 'electric',
     },
     {
-        category: 'Web Development',
-        items: ['HTML5', 'CSS3', 'JavaScript', 'React.js (Basics)', 'Bootstrap', 'Tailwind CSS (Basics)'],
+        category: 'App & Web',
+        items: ['HTML', 'CSS', 'JavaScript', 'Flask', 'PHP', 'Bootstrap'],
         color: 'violet',
     },
     {
         category: 'Databases',
-        items: ['MongoDB'],
+        items: ['SQL', 'MySQL', 'MongoDB'],
         color: 'electric',
     },
     {
-        category: 'Cybersecurity',
-        items: [
-            'Ethical Hacking (CEH v13)',
-            'Web Application Security',
-            'Network Security Basics',
-            'Phishing Detection & Social Engineering',
-            'Intrusion Monitoring',
-            'Vulnerability Assessment',
-            'Secure Coding Practices'
-        ],
+        category: 'Cloud & Platforms',
+        items: ['AWS (Foundations)', 'Google Colab'],
         color: 'violet',
     },
     {
-        category: 'UI/UX Design',
-        items: ['User Research', 'Wireframing', 'Prototyping', 'Usability Testing', 'Design Thinking', 'Figma'],
+        category: 'Core CS',
+        items: ['Data Structures', 'Algorithms', 'OOP'],
         color: 'electric',
     },
     {
-        category: 'Tools & Platforms',
-        items: ['Git & GitHub', 'Postman', 'VS Code', 'Google Colab', 'Canva'],
+        category: 'Data & Analytics',
+        items: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI', 'Excel', 'MS Office'],
+        color: 'violet',
+    },
+    {
+        category: 'Dev Tools',
+        items: ['Git', 'GitHub', 'VS Code', 'Jupyter Notebook'],
+        color: 'electric',
+    },
+    {
+        category: 'Design Tools',
+        items: ['Adobe XD', 'Figma', 'Photoshop', 'Canva'],
+        color: 'violet',
+    },
+    {
+        category: 'UX Methods',
+        items: ['Wireframing', 'Prototyping', 'User Flow', 'Persona Creation', 'Usability Testing'],
+        color: 'electric',
+    },
+    {
+        category: 'UI Skills',
+        items: ['Layout Design', 'Typography', 'Color Theory', 'Visual Hierarchy', 'Responsive Design'],
         color: 'violet',
     },
 ];
@@ -75,10 +87,10 @@ export default function Skills() {
         <section id="skills" ref={sectionRef} className="py-32 px-6">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center gradient-text">
-                    Skills
+                    Technical Skills
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
                         <GlassCard
                             key={index}

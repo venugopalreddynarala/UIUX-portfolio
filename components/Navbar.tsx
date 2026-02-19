@@ -9,6 +9,7 @@ const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Certifications', href: '#certifications' },
 ];
 
@@ -60,7 +61,7 @@ export default function Navbar() {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
                         >
-                            <span className="gradient-text">LC</span>
+                            <span className="gradient-text">KR</span>
                         </motion.a>
 
                         {/* Desktop Navigation */}

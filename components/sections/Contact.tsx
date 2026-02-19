@@ -82,7 +82,7 @@ export default function Contact() {
                         together.
                     </h2>
                     <p className="contact-title text-xl text-mutedgray max-w-2xl mx-auto">
-                        Have a project in mind or want to discuss cybersecurity solutions? I'd love to hear from you.
+                        Have a project in mind or want to discuss AI solutions? I'd love to hear from you.
                     </p>
                 </div>
 
@@ -164,21 +164,29 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Get in Touch</h3>
                             <div className="space-y-4">
                                 <a
-                                    href="mailto:chaitanya9391@gmail.com"
+                                    href="mailto:kishorereddykamireddy9@gmail.com"
                                     className="flex items-start gap-4 p-4 rounded-xl hover:bg-electric/5 transition-colors group"
                                 >
                                     <Mail className="w-6 h-6 text-electric mt-1 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <p className="text-sm text-mutedgray">Email</p>
-                                        <p className="text-offwhite font-medium">chaitanya9391@gmail.com</p>
+                                        <p className="text-offwhite font-medium break-all">kishorereddykamireddy9@gmail.com</p>
                                     </div>
                                 </a>
 
                                 <div className="flex items-start gap-4 p-4 rounded-xl">
-                                    <MapPin className="w-6 h-6 text-violet mt-1" />
+                                    <Phone className="w-6 h-6 text-violet mt-1" />
+                                    <div>
+                                        <p className="text-sm text-mutedgray">Phone</p>
+                                        <p className="text-offwhite font-medium">+91-9642498305</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 p-4 rounded-xl">
+                                    <MapPin className="w-6 h-6 text-electric mt-1" />
                                     <div>
                                         <p className="text-sm text-mutedgray">Location</p>
-                                        <p className="text-offwhite font-medium">Available for Remote Work</p>
+                                        <p className="text-offwhite font-medium">Andhra Pradesh, India</p>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +197,7 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Connect With Me</h3>
                             <div className="flex flex-col gap-4">
                                 <MagneticButton
-                                    href="https://www.linkedin.com/in/lakshmi-chaitanya-sai-397741326/"
+                                    href="https://www.linkedin.com/in/kishorereddy1212/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 px-6 py-4 glass border-2 border-electric/50 text-offwhite rounded-full font-semibold hover:border-electric hover:bg-electric/10 transition-all duration-300"
@@ -199,7 +207,7 @@ export default function Contact() {
                                 </MagneticButton>
 
                                 <MagneticButton
-                                    href="https://github.com/pchaitanya921"
+                                    href="https://github.com/Kishorereddy-0"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 px-6 py-4 glass border-2 border-violet/50 text-offwhite rounded-full font-semibold hover:border-violet hover:bg-violet/10 transition-all duration-300"
@@ -209,10 +217,10 @@ export default function Contact() {
                                 </MagneticButton>
 
                                 <MagneticButton
-                                    href="mailto:chaitanya9391@gmail.com"
+                                    href="mailto:kishorereddykamireddy9@gmail.com"
                                     onClick={() => {
                                         // Fallback: copy email to clipboard if mailto doesn't work
-                                        navigator.clipboard.writeText('chaitanya9391@gmail.com');
+                                        navigator.clipboard.writeText('kishorereddykamireddy9@gmail.com');
                                     }}
                                     className="flex items-center gap-3 px-6 py-4 bg-electric text-white rounded-full font-semibold hover:bg-electric-light transition-all duration-300 glow-electric"
                                 >
@@ -227,7 +235,7 @@ export default function Contact() {
                 {/* Footer */}
                 <div className="mt-24 pt-12 border-t border-mutedgray/20 text-center">
                     <p className="text-mutedgray text-sm">
-                        © 2026 Lakshmi Chaitanya Sai . Crafted with precision and passion for cybersecurity.
+                        © 2026 Kamireddy Nanda Kishore Reddy.
                     </p>
                 </div>
             </div>
