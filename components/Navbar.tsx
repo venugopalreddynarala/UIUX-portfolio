@@ -16,10 +16,32 @@ const navLinks = [
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('#');
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
+
+            // Scroll spy: determine which section is currently in view
+            const sections = navLinks
+                .map((link) => {
+                    if (link.href === '#') return { id: '#', offset: 0 };
+                    const el = document.querySelector(link.href);
+                    if (!el) return null;
+                    const rect = el.getBoundingClientRect();
+                    return { id: link.href, offset: rect.top };
+                })
+                .filter(Boolean) as { id: string; offset: number }[];
+
+            // Find the section closest to the top of the viewport (with some offset)
+            let current = '#';
+            for (const section of sections) {
+                if (section.id === '#') continue;
+                if (section.offset <= 150) {
+                    current = section.id;
+                }
+            }
+            setActiveSection(current);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -61,7 +83,7 @@ export default function Navbar() {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
                         >
-                            <span className="gradient-text">KR</span>
+                            <span className="gradient-text">VR</span>
                         </motion.a>
 
                         {/* Desktop Navigation */}
@@ -74,13 +96,19 @@ export default function Navbar() {
                                         e.preventDefault();
                                         scrollToSection(link.href);
                                     }}
-                                    className="text-offwhite/80 hover:text-electric transition-colors cursor-hover relative group"
+                                    className={`transition-colors cursor-hover relative group ${
+                                        activeSection === link.href
+                                            ? 'text-electric font-semibold'
+                                            : 'text-offwhite/80 hover:text-electric'
+                                    }`}
                                     initial={{ opacity: 0, y: -20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
                                 >
                                     {link.name}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric transition-all duration-300 group-hover:w-full" />
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-electric transition-all duration-300 ${
+                                        activeSection === link.href ? 'w-full' : 'w-0 group-hover:w-full'
+                                    }`} />
                                 </motion.a>
                             ))}
 
@@ -134,7 +162,11 @@ export default function Navbar() {
                                         e.preventDefault();
                                         scrollToSection(link.href);
                                     }}
-                                    className="text-2xl font-semibold text-offwhite hover:text-electric transition-colors cursor-hover"
+                                    className={`text-2xl font-semibold transition-colors cursor-hover ${
+                                        activeSection === link.href
+                                            ? 'text-electric'
+                                            : 'text-offwhite hover:text-electric'
+                                    }`}
                                     initial={{ opacity: 0, x: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}

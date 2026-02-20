@@ -62,24 +62,16 @@ export default function Hero() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-center lg:text-left">
-                        {/* Small intro */}
-                        <p className="hero-subtitle text-lg text-electric mb-4 font-semibold">
-                            Hi, I'm
-                        </p>
-
-                        {/* Name */}
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                            <span className="hero-title inline-block">Kamireddy</span>{' '}
-                            <span className="hero-title inline-block">Nanda</span>{' '}
-                            <span className="hero-title inline-block">Kishore</span>{' '}
-                            <span className="hero-title inline-block gradient-text">Reddy</span>
+                        {/* Headline */}
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                            <span className="hero-title inline-block">Hi, I&apos;m</span>{' '}
+                            <span className="hero-title inline-block gradient-text">Narala Venu Gopal Reddy</span>
                         </h1>
 
-                        {/* Student Badge */}
-                        <div className="hero-subtitle inline-flex items-center gap-2 px-4 py-2 glass border border-electric/30 rounded-full mb-8">
-                            <span className="text-electric text-2xl">🎓</span>
-                            <span className="text-offwhite/90 font-medium">CS (AI & Data Science) Student</span>
-                        </div>
+                        {/* Subtext */}
+                        <p className="hero-subtitle text-lg md:text-xl text-offwhite/80 mb-8 max-w-xl mx-auto lg:mx-0">
+                            AI & Data Science Engineer specializing in deep learning, computer vision, and scalable AI applications.
+                        </p>
 
                         {/* CTAs */}
                         <div className="relative z-20 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
@@ -93,8 +85,8 @@ export default function Hero() {
                             </MagneticButton>
 
                             <MagneticButton
-                                href="#"
-                                download="Nanda_Kishore_Reddy_Resume.pdf"
+                                href="/Venu_Gopal_Reddy_Resume.pdf"
+                                download="Venu_Gopal_Reddy_Resume.pdf"
                                 className="hero-cta px-8 py-4 glass border-2 border-electric/50 text-offwhite rounded-full font-semibold text-lg hover:border-electric hover:bg-electric/10 transition-all duration-300 shadow-lg"
                             >
                                 Download Resume
@@ -105,7 +97,7 @@ export default function Hero() {
                         <div className="hero-subtitle flex gap-4 justify-center lg:justify-start mt-6">
                             {/* LinkedIn */}
                             <a
-                                href="https://www.linkedin.com/in/kishorereddy1212/"
+                                href="https://www.linkedin.com/in/venugopalreddynarala/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 glass border border-electric/30 rounded-full flex items-center justify-center hover:border-electric hover:bg-electric/10 transition-all duration-300 cursor-hover group"
@@ -118,7 +110,7 @@ export default function Hero() {
 
                             {/* GitHub */}
                             <a
-                                href="https://github.com/Kishorereddy-0"
+                                href="https://github.com/venugopalreddynarala"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 glass border border-electric/30 rounded-full flex items-center justify-center hover:border-electric hover:bg-electric/10 transition-all duration-300 cursor-hover group"
@@ -131,7 +123,7 @@ export default function Hero() {
 
                             {/* Email */}
                             <a
-                                href="mailto:kishorereddykamireddy9@gmail.com"
+                                href="mailto:naralavenugopalreddy@gmail.com"
                                 className="w-12 h-12 glass border border-electric/30 rounded-full flex items-center justify-center hover:border-electric hover:bg-electric/10 transition-all duration-300 cursor-hover group"
                                 aria-label="Email"
                             >
@@ -156,10 +148,10 @@ export default function Hero() {
                             {/* Image container - enhanced border */}
                             <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[6px] border-electric/60 shadow-2xl shadow-electric/30">
                                 <Image
-                                    src="/profile.jpg"
-                                    alt="Kamireddy Nanda Kishore Reddy"
+                                    src="/profile.png"
+                                    alt="Narala Venu Gopal Reddy"
                                     fill
-                                    className="object-cover object-center"
+                                    className="object-cover object-center scale-125"
                                     priority
                                     unoptimized
                                 />

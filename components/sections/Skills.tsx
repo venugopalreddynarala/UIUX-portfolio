@@ -11,17 +11,27 @@ gsap.registerPlugin(ScrollTrigger);
 const skills = [
     {
         category: 'Programming',
-        items: ['Python', 'Basic C'],
+        items: ['Python', 'C', 'JavaScript'],
         color: 'electric',
     },
     {
-        category: 'App & Web',
+        category: 'Core CS',
+        items: ['Data Structures', 'Algorithms', 'OOP', 'REST APIs'],
+        color: 'violet',
+    },
+    {
+        category: 'AI / ML',
+        items: ['CNNs', 'Scikit-learn', 'TensorFlow', 'Keras', 'Model Evaluation', 'OpenCV', 'MediaPipe'],
+        color: 'electric',
+    },
+    {
+        category: 'Product & Web',
         items: ['HTML', 'CSS', 'JavaScript', 'Flask', 'PHP', 'Bootstrap'],
         color: 'violet',
     },
     {
         category: 'Databases',
-        items: ['SQL', 'MySQL', 'MongoDB'],
+        items: ['SQL', 'MySQL'],
         color: 'electric',
     },
     {
@@ -30,34 +40,19 @@ const skills = [
         color: 'violet',
     },
     {
-        category: 'Core CS',
-        items: ['Data Structures', 'Algorithms', 'OOP'],
-        color: 'electric',
-    },
-    {
         category: 'Data & Analytics',
         items: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI', 'Excel', 'MS Office'],
-        color: 'violet',
+        color: 'electric',
     },
     {
         category: 'Dev Tools',
         items: ['Git', 'GitHub', 'VS Code', 'Jupyter Notebook'],
-        color: 'electric',
-    },
-    {
-        category: 'Design Tools',
-        items: ['Adobe XD', 'Figma', 'Photoshop', 'Canva'],
         color: 'violet',
     },
     {
-        category: 'UX Methods',
-        items: ['Wireframing', 'Prototyping', 'User Flow', 'Persona Creation', 'Usability Testing'],
+        category: 'Generative AI',
+        items: ['OpenAI API', 'Gemini API', 'Prompt Engineering'],
         color: 'electric',
-    },
-    {
-        category: 'UI Skills',
-        items: ['Layout Design', 'Typography', 'Color Theory', 'Visual Hierarchy', 'Responsive Design'],
-        color: 'violet',
     },
 ];
 

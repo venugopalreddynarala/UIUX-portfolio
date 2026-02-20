@@ -164,13 +164,13 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Get in Touch</h3>
                             <div className="space-y-4">
                                 <a
-                                    href="mailto:kishorereddykamireddy9@gmail.com"
+                                    href="mailto:naralavenugopalreddy@gmail.com"
                                     className="flex items-start gap-4 p-4 rounded-xl hover:bg-electric/5 transition-colors group"
                                 >
                                     <Mail className="w-6 h-6 text-electric mt-1 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <p className="text-sm text-mutedgray">Email</p>
-                                        <p className="text-offwhite font-medium break-all">kishorereddykamireddy9@gmail.com</p>
+                                        <p className="text-offwhite font-medium break-all">naralavenugopalreddy@gmail.com</p>
                                     </div>
                                 </a>
 
@@ -178,7 +178,7 @@ export default function Contact() {
                                     <Phone className="w-6 h-6 text-violet mt-1" />
                                     <div>
                                         <p className="text-sm text-mutedgray">Phone</p>
-                                        <p className="text-offwhite font-medium">+91-9642498305</p>
+                                        <p className="text-offwhite font-medium">+91-9121499852</p>
                                     </div>
                                 </div>
 
@@ -197,7 +197,7 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Connect With Me</h3>
                             <div className="flex flex-col gap-4">
                                 <MagneticButton
-                                    href="https://www.linkedin.com/in/kishorereddy1212/"
+                                    href="https://www.linkedin.com/in/venugopalreddynarala/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 px-6 py-4 glass border-2 border-electric/50 text-offwhite rounded-full font-semibold hover:border-electric hover:bg-electric/10 transition-all duration-300"
@@ -207,7 +207,7 @@ export default function Contact() {
                                 </MagneticButton>
 
                                 <MagneticButton
-                                    href="https://github.com/Kishorereddy-0"
+                                    href="https://github.com/venugopalreddynarala"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 px-6 py-4 glass border-2 border-violet/50 text-offwhite rounded-full font-semibold hover:border-violet hover:bg-violet/10 transition-all duration-300"
@@ -217,10 +217,10 @@ export default function Contact() {
                                 </MagneticButton>
 
                                 <MagneticButton
-                                    href="mailto:kishorereddykamireddy9@gmail.com"
+                                    href="mailto:naralavenugopalreddy@gmail.com"
                                     onClick={() => {
                                         // Fallback: copy email to clipboard if mailto doesn't work
-                                        navigator.clipboard.writeText('kishorereddykamireddy9@gmail.com');
+                                        navigator.clipboard.writeText('naralavenugopalreddy@gmail.com');
                                     }}
                                     className="flex items-center gap-3 px-6 py-4 bg-electric text-white rounded-full font-semibold hover:bg-electric-light transition-all duration-300 glow-electric"
                                 >
@@ -235,7 +235,7 @@ export default function Contact() {
                 {/* Footer */}
                 <div className="mt-24 pt-12 border-t border-mutedgray/20 text-center">
                     <p className="text-mutedgray text-sm">
-                        © 2026 Kamireddy Nanda Kishore Reddy.
+                        © 2026 Narala Venu Gopal Reddy.
                     </p>
                 </div>
             </div>

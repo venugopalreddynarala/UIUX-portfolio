@@ -13,32 +13,21 @@ const certifications = [
         issuer: 'AWS',
         year: 'Graduate',
         highlight: true,
-        image: '/aws_certificate.png', // Placeholder
-        logo: '/aws_logo.png', // Placeholder
+        image: '/aws_certificate.png',
+        logo: '/aws_logo.png',
         description: 'Fundamental understanding of AWS Cloud concepts, security, architecture, pricing, and support.',
         skills: ['Cloud Computing', 'AWS Services', 'Security', 'Architecture'],
         credentialUrl: '',
     },
     {
-        name: 'Data Visualisation: Empowering Business with Effective Insights',
-        issuer: 'TATA',
+        name: 'Python & Networking',
+        issuer: 'Cisco',
         year: 'Completed',
         highlight: false,
-        image: '/tata_certificate.png', // Placeholder
-        logo: '/tata_logo.png', // Placeholder
-        description: 'Virtual experience program covering data visualization concepts and tools for business insights.',
-        skills: ['Data Visualization', 'Business Insights', 'Dashboards'],
-        credentialUrl: '',
-    },
-    {
-        name: 'Python',
-        issuer: 'Simplilearn',
-        year: 'Completed',
-        highlight: false,
-        image: '/simplilearn_python.png', // Placeholder
-        logo: '/simplilearn_logo.png', // Placeholder
-        description: 'Certification in Python programming language covering core concepts and libraries.',
-        skills: ['Python', 'Programming', 'Scripting'],
+        image: '/cisco_certificate.png',
+        logo: '/cisco_logo.png',
+        description: 'Certification in Python programming and networking fundamentals from Cisco.',
+        skills: ['Python', 'Networking', 'Programming'],
         credentialUrl: '',
     },
     {
@@ -46,10 +35,21 @@ const certifications = [
         issuer: 'Wipro TalentNext',
         year: 'Completed',
         highlight: false,
-        image: '/wipro_datascience.png', // Placeholder
-        logo: '/wipro_logo.png', // Placeholder
+        image: '/wipro_datascience.png',
+        logo: '/wipro_logo.png',
         description: 'Comprehensive program on Data Science methodologies and tools.',
         skills: ['Data Science', 'Machine Learning', 'Analysis'],
+        credentialUrl: '',
+    },
+    {
+        name: 'Software Engineering Virtual Program',
+        issuer: 'JPMorgan',
+        year: 'Completed',
+        highlight: false,
+        image: '/jpmorgan_certificate.png',
+        logo: '/jpmorgan_logo.png',
+        description: 'Virtual experience program covering software engineering practices and financial technology.',
+        skills: ['Software Engineering', 'FinTech', 'Problem Solving'],
         credentialUrl: '',
     },
     {
@@ -57,8 +57,8 @@ const certifications = [
         issuer: 'Deloitte',
         year: 'Completed',
         highlight: false,
-        image: '/deloitte_analytics.png', // Placeholder
-        logo: '/deloitte_logo.png', // Placeholder
+        image: '/deloitte_analytics.png',
+        logo: '/deloitte_logo.png',
         description: 'Virtual Internship program focusing on data analytics and consulting.',
         skills: ['Data Analytics', 'Consulting', 'Problem Solving'],
         credentialUrl: '',

@@ -19,13 +19,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-    title: "Kamireddy Nanda Kishore Reddy - Portfolio",
-    description: "Portfolio of Kamireddy Nanda Kishore Reddy, Computer Science (AI & Data Science) Student.",
-    keywords: ["AI", "Data Science", "Computer Science", "Portfolio", "Student", "Kamireddy Nanda Kishore Reddy"],
-    authors: [{ name: "Kamireddy Nanda Kishore Reddy" }],
+    title: "Narala Venu Gopal Reddy - Portfolio",
+    description: "Portfolio of Narala Venu Gopal Reddy, Computer Science (AI & Data Science) Student.",
+    keywords: ["AI", "Data Science", "Computer Science", "Portfolio", "Student", "Narala Venu Gopal Reddy", "Software Engineering"],
+    authors: [{ name: "Narala Venu Gopal Reddy" }],
     openGraph: {
-        title: "Kamireddy Nanda Kishore Reddy - Portfolio",
-        description: "Portfolio of Kamireddy Nanda Kishore Reddy, Computer Science (AI & Data Science) Student.",
+        title: "Narala Venu Gopal Reddy - Portfolio",
+        description: "Portfolio of Narala Venu Gopal Reddy, Computer Science (AI & Data Science) Student.",
         type: "website",
     },
 };

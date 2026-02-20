@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, Search, Lock, Activity, MousePointer, CreditCard, Box } from 'lucide-react';
+import { Search, Lock, Activity, MousePointer, CreditCard, Box, Video, UserCheck } from 'lucide-react';
 import GlassCard from '@/components/GlassCard';
 import ProjectModal from '@/components/ProjectModal';
 
@@ -12,12 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
     {
         title: 'AI-Powered X-Ray Visualization and Pneumonia Detection',
-        impact: 'Automated pneumonia detection with visual explainability',
+        impact: 'End-to-end AI system: data → model → explainability → UI',
         tech: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Flask'],
         gradient: 'from-electric to-violet',
         icon: Activity,
         image: '/pneumonia_detection.jpg', // Placeholder for now, can be updated later
-        description: 'Designed and deployed an end-to-end AI product to detect pneumonia from chest X-ray images using deep learning. Integrated Grad-CAM explainability to generate visual heatmaps for clinical interpretation.',
+        description: 'Designed and deployed an end-to-end AI product to detect pneumonia from chest X-ray images using deep learning. Integrated Grad-CAM explainability to generate visual heatmaps for clinical interpretation. Built a Flask-based web application enabling real-time image uploads and predictions.',
         features: [
             'End-to-end AI pipeline for X-ray analysis',
             'Deep learning model for pneumonia detection',
@@ -35,12 +35,12 @@ const projects = [
             'Provided visual heatmaps for clinical interpretation',
             'Deployed as a real-time web application'
         ],
-        github: '',
+        github: 'https://github.com/venugopalreddynarala/AI-POWERED-X-RAY-VISUALIZATION-AND-DAMAGE-DETECTION-FOR-PNEUMONIA',
         demo: ''
     },
     {
-        title: 'Smart Cursor Control System',
-        impact: 'Hands-free cursor control for differently-abled users',
+        title: 'Smart Cursor Control System for Differently-Abled Users',
+        impact: 'Hands-free cursor control with strong XR/immersive interaction alignment',
         tech: ['Python', 'OpenCV', 'MediaPipe'],
         gradient: 'from-violet to-electric',
         icon: MousePointer,
@@ -62,12 +62,12 @@ const projects = [
             'High accuracy in facial tracking',
             'Strong alignment with XR/immersive interaction systems'
         ],
-        github: '',
+        github: 'https://github.com/venugopalreddynarala/Smart-Cursor-Control-System-for-Differently-Abled-Users',
         demo: ''
     },
     {
         title: 'Intelligent Payment Fraud Detection System',
-        impact: 'Detects fraudulent transactions using ML',
+        impact: 'ML pipeline to detect fraudulent financial transactions',
         tech: ['Python', 'Scikit-learn', 'Pandas'],
         gradient: 'from-electric to-violet',
         icon: CreditCard,
@@ -89,12 +89,12 @@ const projects = [
             'Reduced false positives',
             'Effective detection of fraudulent patterns'
         ],
-        github: '',
+        github: 'https://github.com/venugopalreddynarala/online-payment-fraud-detection-ml',
         demo: ''
     },
     {
         title: 'Inventory Management Web Application',
-        impact: 'Role-based inventory and user management',
+        impact: 'Full-stack digital product with role-based authentication & CRUD',
         tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
         gradient: 'from-violet to-electric',
         icon: Box,
@@ -117,36 +117,63 @@ const projects = [
             'Secure user authentication and role management',
             'Efficient real-time data handling'
         ],
-        github: '',
+        github: 'https://github.com/venugopalreddynarala/inventory',
         demo: ''
     },
     {
-        title: 'AttendEase – Role-Based Employee Attendance Management System',
-        impact: 'Secure MERN stack attendance tracking with analytics',
-        tech: ['React', 'Redux', 'Node.js', 'Express', 'MongoDB'],
+        title: 'AI Video Intelligence Surveillance System',
+        impact: 'Real-time AI-powered video analytics for intelligent surveillance',
+        tech: ['Python', 'OpenCV', 'Deep Learning', 'YOLO', 'TensorFlow'],
         gradient: 'from-electric to-violet',
-        icon: Shield,
-        image: '/attendease.jpg', // Placeholder
-        description: 'Developed a full-stack role-based Employee Attendance System using the MERN stack. Designed to digitally manage employee attendance with support for Employee and Manager roles. Managers can monitor team performance, generate reports, and export CSV files, while employees can mark daily attendance and view summaries.',
+        icon: Video,
+        image: '/ai_surveillance.svg',
+        description: 'Developed an AI-powered video intelligence surveillance system capable of real-time object detection, tracking, and anomaly recognition. Leveraged deep learning models for automated monitoring and alert generation from live video feeds.',
         features: [
-            'Role-Based Access Control (Employee & Manager)',
-            'Secure JWT Authentication & bcryptjs hashing',
-            'Attendance Trend Analysis & Visualizations',
-            'CSV Report Generation for Managers',
-            'Real-time Dashboard with Recharts',
-            'Protected Routes & Middleware'
+            'Real-time object detection and tracking',
+            'Anomaly detection in video feeds',
+            'Automated alert generation',
+            'Deep learning-based video analytics',
+            'Live video stream processing'
         ],
         challenges: [
-            'Implementing secure role-based access control and JWT auth',
-            'Optimizing MongoDB queries for attendance analytics',
-            'Designing dynamic dashboard visualizations for real-time monitoring'
+            'Processing high-resolution video in real-time',
+            'Minimizing false positive alerts',
+            'Optimizing model inference for live feeds'
         ],
         results: [
-            'Efficient digital attendance management',
-            'Secure and scalable authentication system',
-            'Actionable insights via data visualization and reports'
+            'Real-time surveillance with AI-driven insights',
+            'Accurate object detection and tracking',
+            'Efficient anomaly detection and alerting'
         ],
-        github: '',
+        github: 'https://github.com/venugopalreddynarala/AI-VIDEO-INTELLIGENCE-SURVEILLANCE-SYSTEM',
+        demo: ''
+    },
+    {
+        title: 'Smart Attendance System',
+        impact: 'Automated attendance tracking with face recognition technology',
+        tech: ['Python', 'OpenCV', 'Face Recognition', 'Flask', 'MySQL'],
+        gradient: 'from-violet to-electric',
+        icon: UserCheck,
+        image: '/attendance_system.svg',
+        description: 'Built an intelligent attendance management system using face recognition technology. The system automates attendance tracking by identifying individuals through real-time facial detection and matching, eliminating manual roll calls and reducing errors.',
+        features: [
+            'Real-time face detection and recognition',
+            'Automated attendance marking',
+            'Database integration for record management',
+            'Web-based dashboard for attendance reports',
+            'Multi-user support with facial enrollment'
+        ],
+        challenges: [
+            'Handling varying lighting conditions for accurate recognition',
+            'Optimizing face matching speed for real-time use',
+            'Managing large datasets of facial encodings efficiently'
+        ],
+        results: [
+            'Automated attendance tracking with high accuracy',
+            'Eliminated manual roll-call errors',
+            'Streamlined attendance management workflow'
+        ],
+        github: 'https://github.com/venugopalreddynarala/attendance-system',
         demo: ''
     },
 ];

@@ -22,7 +22,17 @@ import {
     Search,
     Type,
     Circle,
-    Monitor
+    Monitor,
+    Brain,
+    Eye,
+    Layers,
+    Network,
+    Bot,
+    Sparkles,
+    MessageSquare,
+    Hand,
+    Activity,
+    Plug,
 } from 'lucide-react';
 
 interface SkillIconProps {
@@ -58,6 +68,7 @@ export default function SkillIcon({ name, className = "w-6 h-6 ml-2" }: SkillIco
     // Map skill names to Lucide icons
     const lucideIcons: { [key: string]: React.ElementType } = {
         // Programming
+        'C': Terminal,
         'Basic C': Terminal,
         'Flask': Server,
         'PHP': Server,
@@ -74,6 +85,16 @@ export default function SkillIcon({ name, className = "w-6 h-6 ml-2" }: SkillIco
         'Data Structures': Boxes,
         'Algorithms': Cpu,
         'OOP': Boxes,
+        'REST APIs': Plug,
+
+        // AI / ML
+        'CNNs': Layers,
+        'Scikit-learn': Brain,
+        'TensorFlow': Network,
+        'Keras': Network,
+        'Model Evaluation': Activity,
+        'OpenCV': Eye,
+        'MediaPipe': Hand,
 
         // Data
         'Pandas': BarChart,
@@ -86,6 +107,11 @@ export default function SkillIcon({ name, className = "w-6 h-6 ml-2" }: SkillIco
         // Tools
         'Git': GitBranch,
         'Jupyter Notebook': BookOpen,
+
+        // Generative AI
+        'OpenAI API': Bot,
+        'Gemini API': Sparkles,
+        'Prompt Engineering': MessageSquare,
 
         // Design Tools
         'Adobe XD': Palette,

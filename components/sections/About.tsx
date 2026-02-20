@@ -56,10 +56,19 @@ export default function About() {
 
                 <div className="space-y-6 text-lg md:text-xl text-offwhite/90 leading-relaxed">
                     <p className="about-line">
-                        Hello, I’m <span className="text-electric font-semibold">K. Nanda Kishore Reddy</span>, a final-year B.Tech student specializing in <span className="text-violet font-semibold">Artificial Intelligence & Data Science</span> at Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology.
+                        Hello, I&apos;m <span className="text-electric font-semibold">Narala Venu Gopal Reddy</span>.
                     </p>
                     <p className="about-line">
-                        I am passionate about building intelligent, scalable digital systems that combine <span className="text-electric font-semibold">AI, data analytics, and full-stack development</span>. My work focuses on transforming real-world problems into practical, technology-driven solutions — from deep learning–based medical image analysis to fraud detection systems and interactive AI applications.
+                        I design and deploy <span className="text-electric font-semibold">end-to-end AI systems</span> that solve real-world problems at scale. My work combines <span className="text-violet font-semibold">deep learning, data engineering, and full-stack integration</span>, with a strong focus on building production-ready solutions rather than isolated models.
+                    </p>
+                    <p className="about-line">
+                        I work across the complete lifecycle — from data collection and preprocessing to model development, evaluation, and deployment. I care about <span className="text-electric font-semibold">clean architecture, efficient pipelines</span>, and systems that can operate reliably outside controlled environments.
+                    </p>
+                    <p className="about-line">
+                        I approach every project with an engineering mindset, prioritizing <span className="text-violet font-semibold">performance, scalability, and usability</span>. Every decision is driven by impact, not experimentation for its own sake.
+                    </p>
+                    <p className="about-line font-semibold text-white/95">
+                        My goal is simple: build intelligent systems that are practical, interpretable, and ready for real-world adoption.
                     </p>
                 </div>
 
@@ -72,25 +81,25 @@ export default function About() {
                             <span className="text-mutedgray">2022 – 2026</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</p>
-                        <p className="text-mutedgray mt-1">CGPA: 8.2</p>
+                        <p className="text-mutedgray mt-1">CGPA: 8.0</p>
                     </div>
 
                     <div className="about-line glass p-6 rounded-2xl border border-violet/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
-                            <h4 className="text-xl font-bold text-violet">Sri Saraswathi Junior College</h4>
+                            <h4 className="text-xl font-bold text-violet">Chaitanya Junior College</h4>
                             <span className="text-mutedgray">2022</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Board of Intermediate Education, Andhra Pradesh</p>
-                        <p className="text-mutedgray mt-1">Percentage: 83%</p>
+                        <p className="text-mutedgray mt-1">Percentage: 77%</p>
                     </div>
 
                     <div className="about-line glass p-6 rounded-2xl border border-electric/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
-                            <h4 className="text-xl font-bold text-electric">Sri Mallikarjuna High School</h4>
-                            <span className="text-mutedgray">2020</span>
+                            <h4 className="text-xl font-bold text-electric">All Saints English Medium School</h4>
+                            <span className="text-mutedgray">2019 – 2020</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Board of Secondary Education, Andhra Pradesh</p>
-                        <p className="text-mutedgray mt-1">Percentage: 100%</p>
+                        <p className="text-mutedgray mt-1">Percentage: 92.6%</p>
                     </div>
                 </div>
 
