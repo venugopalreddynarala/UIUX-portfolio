@@ -83,7 +83,7 @@ export default function Navbar() {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
                         >
-                            <span className="gradient-text">VR</span>
+                            <span className="gradient-text">VGR</span>
                         </motion.a>
 
                         {/* Desktop Navigation */}
@@ -97,8 +97,8 @@ export default function Navbar() {
                                         scrollToSection(link.href);
                                     }}
                                     className={`transition-colors cursor-hover relative group ${activeSection === link.href
-                                            ? 'text-electric font-semibold'
-                                            : 'text-offwhite/80 hover:text-electric'
+                                        ? 'text-electric font-semibold'
+                                        : 'text-offwhite/80 hover:text-electric'
                                         }`}
                                     initial={{ opacity: 0, y: -20 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -161,8 +161,8 @@ export default function Navbar() {
                                         scrollToSection(link.href);
                                     }}
                                     className={`text-2xl font-semibold transition-colors cursor-hover ${activeSection === link.href
-                                            ? 'text-electric'
-                                            : 'text-offwhite hover:text-electric'
+                                        ? 'text-electric'
+                                        : 'text-offwhite hover:text-electric'
                                         }`}
                                     initial={{ opacity: 0, x: 50 }}
                                     animate={{ opacity: 1, x: 0 }}

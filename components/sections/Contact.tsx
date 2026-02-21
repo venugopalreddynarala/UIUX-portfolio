@@ -232,9 +232,16 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Footer */}
-                <div className="mt-24 pt-12 border-t border-mutedgray/20 text-center">
-                    <p className="text-mutedgray text-sm">
+                {/* Scrolling Footer Marquee */}
+                <div className="mt-24 pt-12 border-t border-mutedgray/20 overflow-hidden">
+                    <div className="animate-marquee flex whitespace-nowrap" style={{ width: 'max-content' }}>
+                        {[...Array(8)].map((_, i) => (
+                            <span key={i} className="text-5xl md:text-7xl font-bold text-offwhite/[0.08] uppercase tracking-widest mx-8 select-none" style={{ fontStyle: 'italic' }}>
+                                VENU GOPAL REDDY <span className="text-electric/20 mx-4">|</span> UI UX DESIGNER <span className="text-accent/20 mx-4">✦</span>
+                            </span>
+                        ))}
+                    </div>
+                    <p className="text-mutedgray text-sm text-center mt-8 pb-4">
                         © 2026 Narala Venu Gopal Reddy.
                     </p>
                 </div>

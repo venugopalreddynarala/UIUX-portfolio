@@ -239,6 +239,22 @@ body::before {
   background: var(--color-electric-light);
 }
 
+/* Scrolling Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+}
+
 /* Card Hover Shine Effect */
 .card-shine {
   position: relative;
@@ -252,14 +268,12 @@ body::before {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(108, 99, 255, 0.03) 45%,
-    rgba(108, 99, 255, 0.05) 50%,
-    rgba(108, 99, 255, 0.03) 55%,
-    transparent 60%
-  );
+  background: linear-gradient(45deg,
+      transparent 40%,
+      rgba(108, 99, 255, 0.03) 45%,
+      rgba(108, 99, 255, 0.05) 50%,
+      rgba(108, 99, 255, 0.03) 55%,
+      transparent 60%);
   transform: rotate(45deg) translateX(-100%);
   transition: transform 0.8s ease;
   pointer-events: none;
