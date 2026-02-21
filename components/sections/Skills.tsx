@@ -24,6 +24,7 @@ const skills = [
             'Visual Hierarchy',
             'Typography',
             'Color Theory',
+            'Graphic Designing',
         ],
         color: 'electric',
     },
