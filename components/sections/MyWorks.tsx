@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
  */
 const works: { src: string; title: string; category: string }[] = [
     { src: '/works/birthday-poster.png', title: 'Birthday Poster — Rohith', category: 'Poster' },
+    { src: '/works/graphic-design-2.jpg', title: 'But Why — Double Exposure', category: 'Photo Manipulation' },
 ];
 
 export default function MyWorks() {
