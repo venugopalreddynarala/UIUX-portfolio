@@ -17,10 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
  *   { src: '/works/my-poster.jpg', title: 'Event Poster', category: 'Poster' }
  */
 const works: { src: string; title: string; category: string }[] = [
-    // Add your works here, e.g.:
-    // { src: '/works/poster-1.jpg', title: 'Music Festival Poster', category: 'Poster' },
-    // { src: '/works/social-1.jpg', title: 'Instagram Campaign', category: 'Social Media' },
-    // { src: '/works/brand-1.jpg', title: 'Logo Design', category: 'Brand Identity' },
+    { src: '/works/birthday-poster.png', title: 'Birthday Poster — Rohith', category: 'Poster' },
 ];
 
 export default function MyWorks() {
