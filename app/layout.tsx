@@ -19,13 +19,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-    title: "Narala Venu Gopal Reddy - Portfolio",
-    description: "Portfolio of Narala Venu Gopal Reddy, Computer Science (AI & Data Science) Student.",
-    keywords: ["AI", "Data Science", "Computer Science", "Portfolio", "Student", "Narala Venu Gopal Reddy", "Software Engineering"],
+    title: "Narala Venu Gopal Reddy — UI/UX Designer Portfolio",
+    description: "UI/UX Designer with hands-on experience designing end-to-end product flows — from user research and wireframes to high-fidelity prototypes. Strong in Figma, Adobe XD, and design systems.",
+    keywords: ["UI/UX Designer", "Figma", "Adobe XD", "User Research", "Wireframing", "Prototyping", "Design Systems", "Portfolio", "Narala Venu Gopal Reddy", "UX Design", "Interaction Design", "Accessibility"],
     authors: [{ name: "Narala Venu Gopal Reddy" }],
     openGraph: {
-        title: "Narala Venu Gopal Reddy - Portfolio",
-        description: "Portfolio of Narala Venu Gopal Reddy, Computer Science (AI & Data Science) Student.",
+        title: "Narala Venu Gopal Reddy — UI/UX Designer Portfolio",
+        description: "UI/UX Designer crafting end-to-end product flows — from user research and wireframes to high-fidelity prototypes.",
         type: "website",
     },
 };

@@ -10,48 +10,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
     {
-        category: 'Programming',
-        items: ['Python', 'C', 'JavaScript'],
+        category: 'Design & UX',
+        items: [
+            'User Research',
+            'Personas & User Journeys',
+            'Information Architecture',
+            'Wireframing',
+            'Interactive Prototyping',
+            'Usability Testing',
+            'Responsive Design',
+            'Accessibility (WCAG)',
+            'Design Systems',
+            'Visual Hierarchy',
+            'Typography',
+            'Color Theory',
+        ],
         color: 'electric',
     },
     {
-        category: 'Core CS',
-        items: ['Data Structures', 'Algorithms', 'OOP', 'REST APIs'],
+        category: 'Tools',
+        items: ['Figma', 'Adobe XD', 'Framer', 'Webflow', 'Adobe Photoshop', 'Canva'],
         color: 'violet',
     },
     {
-        category: 'AI / ML',
-        items: ['CNNs', 'Scikit-learn', 'TensorFlow', 'Keras', 'Model Evaluation', 'OpenCV', 'MediaPipe'],
-        color: 'electric',
-    },
-    {
-        category: 'Product & Web',
-        items: ['HTML', 'CSS', 'JavaScript', 'Flask', 'PHP', 'Bootstrap'],
-        color: 'violet',
-    },
-    {
-        category: 'Databases',
-        items: ['SQL', 'MySQL'],
-        color: 'electric',
-    },
-    {
-        category: 'Cloud & Platforms',
-        items: ['AWS (Foundations)', 'Google Colab'],
-        color: 'violet',
-    },
-    {
-        category: 'Data & Analytics',
-        items: ['Pandas', 'NumPy', 'Matplotlib', 'Power BI', 'Excel', 'MS Office'],
-        color: 'electric',
-    },
-    {
-        category: 'Dev Tools',
-        items: ['Git', 'GitHub', 'VS Code', 'Jupyter Notebook'],
-        color: 'violet',
-    },
-    {
-        category: 'Generative AI',
-        items: ['OpenAI API', 'Gemini API', 'Prompt Engineering'],
+        category: 'Soft Skills',
+        items: [
+            'Communication & Presentation',
+            'Problem Solving',
+            'Feedback-Oriented Mindset',
+            'Adaptability & Learning',
+            'Creativity',
+        ],
         color: 'electric',
     },
 ];
@@ -82,10 +71,10 @@ export default function Skills() {
         <section id="skills" ref={sectionRef} className="py-32 px-6">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center gradient-text">
-                    Technical Skills
+                    Skills & Expertise
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skills.map((skill, index) => (
                         <GlassCard
                             key={index}

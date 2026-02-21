@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Search, Lock, Activity, MousePointer, CreditCard, Box, Video, UserCheck } from 'lucide-react';
+import { Palette, Smartphone, Layout, CreditCard, Package } from 'lucide-react';
 import GlassCard from '@/components/GlassCard';
 import ProjectModal from '@/components/ProjectModal';
 
@@ -11,170 +12,144 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        title: 'AI-Powered X-Ray Visualization and Pneumonia Detection',
-        impact: 'End-to-end AI system: data → model → explainability → UI',
-        tech: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Flask'],
+        title: 'Food Delivery App UI Design',
+        impact: 'Multi-screen mobile app — Home, Menu & Checkout with intuitive UX',
+        tech: ['Adobe XD', 'Wireframing', 'Prototyping', 'Color Theory', 'Typography'],
         gradient: 'from-electric to-violet',
-        icon: Activity,
-        image: '/pneumonia_detection.jpg', // Placeholder for now, can be updated later
-        description: 'Designed and deployed an end-to-end AI product to detect pneumonia from chest X-ray images using deep learning. Integrated Grad-CAM explainability to generate visual heatmaps for clinical interpretation. Built a Flask-based web application enabling real-time image uploads and predictions.',
+        icon: Smartphone,
+        image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&q=80',
+        description: 'Designed a multi-screen mobile application flow consisting of Home, Menu, and Checkout screens with a strong focus on simplicity, usability, and visual hierarchy. Created wireframes and high-fidelity prototypes in Adobe XD, applying principles of color theory, typography, and icon consistency to enhance the overall user experience.',
         features: [
-            'End-to-end AI pipeline for X-ray analysis',
-            'Deep learning model for pneumonia detection',
-            'Grad-CAM integration for visual heatmaps',
-            'Flask-based web application for real-time predictions',
-            'Real-time image uploads and processing'
+            'Multi-screen mobile application flow',
+            'Home, Menu, and Checkout screen designs',
+            'Wireframes and high-fidelity prototypes in Adobe XD',
+            'Color theory and typography principles applied',
+            'Consistent icon system for enhanced UX',
         ],
         challenges: [
-            'Improving model accuracy on diverse datasets',
-            'Implementing Grad-CAM for transparent model decisions',
-            'Optimizing inference time for real-time usage'
+            'Balancing visual hierarchy across multiple screens',
+            'Ensuring seamless navigation between app sections',
+            'Maintaining consistency in design tokens and spacing',
         ],
         results: [
-            'Successfully detected pneumonia from X-ray images',
-            'Provided visual heatmaps for clinical interpretation',
-            'Deployed as a real-time web application'
+            'Clean, usable multi-screen mobile experience',
+            'Strong visual hierarchy enhancing user flow',
+            'Consistent design language across all screens',
         ],
-        github: 'https://github.com/venugopalreddynarala/AI-POWERED-X-RAY-VISUALIZATION-AND-DAMAGE-DETECTION-FOR-PNEUMONIA',
-        demo: ''
+        github: '',
+        demo: '',
     },
     {
-        title: 'Smart Cursor Control System for Differently-Abled Users',
-        impact: 'Hands-free cursor control with strong XR/immersive interaction alignment',
-        tech: ['Python', 'OpenCV', 'MediaPipe'],
+        title: 'Quiz App UI/UX Design',
+        impact: 'Engaging quiz interface with focus on clarity & micro-interactions',
+        tech: ['Adobe XD', 'User Flows', 'Prototyping', 'Color Psychology', 'Micro-interactions'],
         gradient: 'from-violet to-electric',
-        icon: MousePointer,
-        image: '/cursor_control.jpg', // Placeholder
-        description: 'Developed an AI-driven human-computer interaction system enabling hands-free cursor control through facial landmark tracking. Translated real-time video input into system-level actions using computer vision.',
+        icon: Layout,
+        image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&q=80',
+        description: 'Designed an engaging Quiz App interface to enhance user learning and participation. Created complete user flows and high-fidelity prototypes in Adobe XD, focusing on clarity, usability, and visual consistency. Applied color psychology, typography hierarchy, and subtle micro-interactions to deliver an intuitive and enjoyable user experience.',
         features: [
-            'Facial landmark tracking for cursor movement',
-            'Hands-free interaction for differently-abled users',
-            'Real-time video processing',
-            'System-level action translation (click, scroll)'
+            'Complete user flows for quiz interaction',
+            'High-fidelity prototypes in Adobe XD',
+            'Color psychology applied for engagement',
+            'Typography hierarchy for readability',
+            'Subtle micro-interactions for delight',
         ],
         challenges: [
-            'Ensuring precise cursor control via facial movements',
-            'Minimizing latency in video processing',
-            'Handling different lighting conditions'
+            'Designing for varied content lengths and question types',
+            'Creating engaging progress indicators',
+            'Balancing gamification with usability',
         ],
         results: [
-            'Enabled hands-free computer control',
-            'High accuracy in facial tracking',
-            'Strong alignment with XR/immersive interaction systems'
+            'Intuitive and enjoyable quiz experience',
+            'Strong visual consistency across screens',
+            'Enhanced user engagement through micro-interactions',
         ],
-        github: 'https://github.com/venugopalreddynarala/Smart-Cursor-Control-System-for-Differently-Abled-Users',
-        demo: ''
+        github: '',
+        demo: '',
     },
     {
-        title: 'Intelligent Payment Fraud Detection System',
-        impact: 'ML pipeline to detect fraudulent financial transactions',
-        tech: ['Python', 'Scikit-learn', 'Pandas'],
+        title: 'Portfolio Website UI/UX Design',
+        impact: 'Responsive personal portfolio — clean, modern & accessible',
+        tech: ['Figma', 'Wireframing', 'Responsive Design', 'Accessibility', 'Design Systems'],
         gradient: 'from-electric to-violet',
+        icon: Palette,
+        image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
+        description: 'Designed a responsive personal portfolio website to showcase design projects and case studies. Created wireframes and high-fidelity mockups in Figma, maintaining a clean, modern, and minimal aesthetic. Applied accessibility principles such as proper contrast, spacing, and readable typography to ensure an inclusive and user-friendly experience.',
+        features: [
+            'Responsive personal portfolio design',
+            'Wireframes and high-fidelity mockups in Figma',
+            'Clean, modern, and minimal aesthetic',
+            'Accessibility-first design approach',
+            'Proper contrast, spacing, and typography',
+        ],
+        challenges: [
+            'Designing for multiple screen sizes responsively',
+            'Balancing minimal aesthetic with rich content',
+            'Meeting WCAG accessibility standards',
+        ],
+        results: [
+            'Inclusive and user-friendly portfolio experience',
+            'Clean, responsive design across all devices',
+            'Strong accessibility compliance',
+        ],
+        github: '',
+        demo: '',
+    },
+    {
+        title: 'Personal Finance Tracker Mobile App',
+        impact: 'Income, expense & savings tracker with intuitive navigation',
+        tech: ['Adobe XD', 'User Research', 'Prototyping', 'Design Systems', 'Accessibility'],
+        gradient: 'from-violet to-electric',
         icon: CreditCard,
-        image: '/fraud_detection.jpg', // Placeholder
-        description: 'Built a machine learning pipeline to detect fraudulent financial transactions using classification algorithms. Implemented data preprocessing, feature engineering, and performance evaluation to improve model accuracy and reduce false positives.',
+        image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+        description: 'Designed a mobile application that helps users monitor income, expenses, and savings with ease. Conducted user research to identify budgeting pain points and crafted intuitive navigation flows. Created high-fidelity prototypes in Adobe XD, applying consistent design systems, responsive layouts, and accessibility principles to enhance the overall user experience.',
         features: [
-            'ML pipeline for fraud detection',
-            'Data preprocessing and feature engineering',
-            'Classification algorithms for transaction analysis',
-            'Performance evaluation metrics'
+            'User research to identify budgeting pain points',
+            'Intuitive navigation flow design',
+            'High-fidelity prototypes in Adobe XD',
+            'Consistent design system application',
+            'Responsive layouts with accessibility principles',
         ],
         challenges: [
-            'Handling imbalanced datasets',
-            'Reducing false positives while maintaining high detection rate',
-            'Optimizing feature selection for model performance'
+            'Simplifying complex financial data visualization',
+            'Designing intuitive budget categorization',
+            'Ensuring accessibility for financial literacy users',
         ],
         results: [
-            'Improved model accuracy',
-            'Reduced false positives',
-            'Effective detection of fraudulent patterns'
+            'Research-backed intuitive finance tracking experience',
+            'Consistent design system across all screens',
+            'Accessible and responsive mobile design',
         ],
-        github: 'https://github.com/venugopalreddynarala/online-payment-fraud-detection-ml',
-        demo: ''
+        github: '',
+        demo: '',
     },
     {
-        title: 'Inventory Management Web Application',
-        impact: 'Full-stack digital product with role-based authentication & CRUD',
-        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-        gradient: 'from-violet to-electric',
-        icon: Box,
-        image: '/inventory_management.jpg', // Placeholder
-        description: 'Developed a full-stack digital product with role-based authentication and complete CRUD operations for managing inventory and users. Designed responsive UI and integrated backend database for real-time updates.',
-        features: [
-            'Role-based authentication system',
-            'Complete CRUD operations for inventory',
-            'User management functionality',
-            'Responsive UI design',
-            'Real-time database updates'
-        ],
-        challenges: [
-            'Implementing secure role-based access control',
-            'Ensuring data consistency across real-time updates',
-            'Designing a user-friendly responsive interface'
-        ],
-        results: [
-            'Streamlined inventory management process',
-            'Secure user authentication and role management',
-            'Efficient real-time data handling'
-        ],
-        github: 'https://github.com/venugopalreddynarala/inventory',
-        demo: ''
-    },
-    {
-        title: 'AI Video Intelligence Surveillance System',
-        impact: 'Real-time AI-powered video analytics for intelligent surveillance',
-        tech: ['Python', 'OpenCV', 'Deep Learning', 'YOLO', 'TensorFlow'],
+        title: 'Food Delivery UI Kit — End-to-End Prototyping',
+        impact: 'Reusable design system with interactive prototypes in Figma',
+        tech: ['Figma', 'Design Systems', 'Interactive Prototyping', 'Component Library', 'Auto Layout'],
         gradient: 'from-electric to-violet',
-        icon: Video,
-        image: '/ai_surveillance.svg',
-        description: 'Developed an AI-powered video intelligence surveillance system capable of real-time object detection, tracking, and anomaly recognition. Leveraged deep learning models for automated monitoring and alert generation from live video feeds.',
+        icon: Package,
+        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
+        description: 'Created interactive prototypes for core user flows including product browsing, cart management, checkout, and order tracking. Developed reusable components and a structured design system to ensure consistency, scalability, and efficient handoff.',
         features: [
-            'Real-time object detection and tracking',
-            'Anomaly detection in video feeds',
-            'Automated alert generation',
-            'Deep learning-based video analytics',
-            'Live video stream processing'
+            'Interactive prototypes for core user flows',
+            'Product browsing, cart, checkout & order tracking',
+            'Reusable component library in Figma',
+            'Structured design system for scalability',
+            'Efficient design-to-developer handoff',
         ],
         challenges: [
-            'Processing high-resolution video in real-time',
-            'Minimizing false positive alerts',
-            'Optimizing model inference for live feeds'
+            'Building a scalable component architecture',
+            'Ensuring prototype interactions feel realistic',
+            'Maintaining design system consistency across flows',
         ],
         results: [
-            'Real-time surveillance with AI-driven insights',
-            'Accurate object detection and tracking',
-            'Efficient anomaly detection and alerting'
+            'Scalable and reusable design system',
+            'Realistic interactive prototypes',
+            'Efficient handoff-ready component library',
         ],
-        github: 'https://github.com/venugopalreddynarala/AI-VIDEO-INTELLIGENCE-SURVEILLANCE-SYSTEM',
-        demo: ''
-    },
-    {
-        title: 'Smart Attendance System',
-        impact: 'Automated attendance tracking with face recognition technology',
-        tech: ['Python', 'OpenCV', 'Face Recognition', 'Flask', 'MySQL'],
-        gradient: 'from-violet to-electric',
-        icon: UserCheck,
-        image: '/attendance_system.svg',
-        description: 'Built an intelligent attendance management system using face recognition technology. The system automates attendance tracking by identifying individuals through real-time facial detection and matching, eliminating manual roll calls and reducing errors.',
-        features: [
-            'Real-time face detection and recognition',
-            'Automated attendance marking',
-            'Database integration for record management',
-            'Web-based dashboard for attendance reports',
-            'Multi-user support with facial enrollment'
-        ],
-        challenges: [
-            'Handling varying lighting conditions for accurate recognition',
-            'Optimizing face matching speed for real-time use',
-            'Managing large datasets of facial encodings efficiently'
-        ],
-        results: [
-            'Automated attendance tracking with high accuracy',
-            'Eliminated manual roll-call errors',
-            'Streamlined attendance management workflow'
-        ],
-        github: 'https://github.com/venugopalreddynarala/attendance-system',
-        demo: ''
+        github: '',
+        demo: '',
     },
 ];
 
@@ -185,13 +160,12 @@ export default function Projects() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Simple fade-in animation for project cards
-            gsap.utils.toArray<HTMLElement>('.project-card').forEach((card, index) => {
+            gsap.utils.toArray<HTMLElement>('.project-card').forEach((card) => {
                 gsap.from(card, {
                     scrollTrigger: {
                         trigger: card,
-                        start: 'top 85%', // Trigger slightly earlier
-                        toggleActions: 'play none none reverse', // Play once, reverse on scroll up
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse',
                     },
                     y: 50,
                     opacity: 0,
@@ -257,14 +231,19 @@ export default function Projects() {
 
                                     {/* Project Visual */}
                                     <div className="order-1 md:order-2 relative h-64 rounded-xl overflow-hidden group-hover:shadow-[0_0_30px_rgba(91,124,255,0.3)] transition-all duration-500">
-                                        {/* Project Image */}
-                                        <img
+                                        <Image
                                             src={project.image}
                                             alt={project.title}
-                                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                         />
-                                        {/* Gradient Overlay - Reduced opacity for better visibility */}
-                                        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-10 transition-opacity mix-blend-overlay`} />
+                                        {/* Gradient overlay */}
+                                        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-40 group-hover:opacity-25 transition-opacity duration-500`} />
+                                        {/* Icon overlay */}
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <project.icon className="w-16 h-16 text-white/40 group-hover:text-white/70 transition-all duration-500 group-hover:scale-110 transform drop-shadow-lg" />
+                                        </div>
                                     </div>
                                 </div>
                             </GlassCard>

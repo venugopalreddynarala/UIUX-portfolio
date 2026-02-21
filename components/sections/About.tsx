@@ -59,16 +59,16 @@ export default function About() {
                         Hello, I&apos;m <span className="text-electric font-semibold">Narala Venu Gopal Reddy</span>.
                     </p>
                     <p className="about-line">
-                        I design and deploy <span className="text-electric font-semibold">end-to-end AI systems</span> that solve real-world problems at scale. My work combines <span className="text-violet font-semibold">deep learning, data engineering, and full-stack integration</span>, with a strong focus on building production-ready solutions rather than isolated models.
+                        I&apos;m a <span className="text-electric font-semibold">UI/UX Designer</span> with hands-on experience designing end-to-end product flows — from <span className="text-violet font-semibold">user research and wireframes</span> to <span className="text-violet font-semibold">high-fidelity prototypes</span>. I build responsive web and mobile interfaces with a strong focus on usability, accessibility, and conversion clarity.
                     </p>
                     <p className="about-line">
-                        I work across the complete lifecycle — from data collection and preprocessing to model development, evaluation, and deployment. I care about <span className="text-electric font-semibold">clean architecture, efficient pipelines</span>, and systems that can operate reliably outside controlled environments.
+                        I work across the complete design lifecycle — from understanding user needs through research and persona creation, to crafting <span className="text-electric font-semibold">pixel-perfect interfaces in Figma and Adobe XD</span>. I care about clean design systems, intuitive navigation patterns, and experiences that truly serve the user.
                     </p>
                     <p className="about-line">
-                        I approach every project with an engineering mindset, prioritizing <span className="text-violet font-semibold">performance, scalability, and usability</span>. Every decision is driven by impact, not experimentation for its own sake.
+                        Every design decision I make is grounded in <span className="text-violet font-semibold">research, empathy, and measurable impact</span>. I believe great design isn&apos;t just about aesthetics — it&apos;s about solving real problems and creating experiences people love to use.
                     </p>
                     <p className="about-line font-semibold text-white/95">
-                        My goal is simple: build intelligent systems that are practical, interpretable, and ready for real-world adoption.
+                        My goal is simple: contribute to product-driven teams where design decisions are backed by research and create meaningful, user-centered experiences.
                     </p>
                 </div>
 
@@ -78,7 +78,7 @@ export default function About() {
                     <div className="about-line glass p-6 rounded-2xl border border-electric/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
                             <h4 className="text-xl font-bold text-electric">Bachelor of Technology in CS (AI & Data Science)</h4>
-                            <span className="text-mutedgray">2022 – 2026</span>
+                            <span className="text-mutedgray">2022 – Present</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</p>
                         <p className="text-mutedgray mt-1">CGPA: 8.0</p>
@@ -87,7 +87,7 @@ export default function About() {
                     <div className="about-line glass p-6 rounded-2xl border border-violet/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
                             <h4 className="text-xl font-bold text-violet">Chaitanya Junior College</h4>
-                            <span className="text-mutedgray">2022</span>
+                            <span className="text-mutedgray">2020 – 2022</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Board of Intermediate Education, Andhra Pradesh</p>
                         <p className="text-mutedgray mt-1">Percentage: 77%</p>

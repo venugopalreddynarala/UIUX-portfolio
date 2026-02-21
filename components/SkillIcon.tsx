@@ -1,38 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
 import {
-    Code,
-    Database,
-    Cloud,
-    Terminal,
-    Layout,
-    Palette,
-    Server,
-    GitBranch,
-    Cpu,
-    Boxes,
-    BarChart,
-    PieChart,
-    TrendingUp,
-    FileSpreadsheet,
-    FileText,
-    BookOpen,
-    Image as ImageIcon,
-    Users,
     Search,
-    Type,
-    Circle,
-    Monitor,
-    Brain,
-    Eye,
-    Layers,
+    Users,
     Network,
-    Bot,
-    Sparkles,
+    Layout,
+    Monitor,
+    MousePointer,
+    Accessibility,
+    Layers,
+    Eye,
+    Type,
+    Palette,
+    Smartphone,
     MessageSquare,
-    Hand,
-    Activity,
-    Plug,
+    Lightbulb,
+    RefreshCw,
+    Sparkles,
+    PenTool,
+    Globe,
+    ImageIcon,
+    Circle,
 } from 'lucide-react';
 
 interface SkillIconProps {
@@ -43,94 +31,38 @@ interface SkillIconProps {
 export default function SkillIcon({ name, className = "w-6 h-6 ml-2" }: SkillIconProps) {
     // Map skill names to image paths
     const iconPaths: { [key: string]: string } = {
-        // Languages
-        'Python': '/python.webp',
-        'Java': '/java.webp',
-        'JavaScript': '/javascript.webp',
-        'Basic C': '/c-logo.png', // Fallback to icon if not found, but we'll try generic
-
-        // Web
-        'HTML': '/Html.webp',
-        'CSS': '/CSS.webp',
-        'React': '/React.webp',
-        'Bootstrap': '/Bootstrap.png',
-        'Tailwind CSS': '/Tailwindcss.webp',
-
-        // Database
-        'MongoDB': '/mongodb.webp',
-
-        // Tools
         'Figma': '/figma.webp',
-        'GitHub': '/github.webp',
-        'VS Code': '/vs code.webp',
     };
 
     // Map skill names to Lucide icons
     const lucideIcons: { [key: string]: React.ElementType } = {
-        // Programming
-        'C': Terminal,
-        'Basic C': Terminal,
-        'Flask': Server,
-        'PHP': Server,
-
-        // Databases
-        'SQL': Database,
-        'MySQL': Database,
-
-        // Cloud
-        'AWS (Foundations)': Cloud,
-        'Google Colab': Cloud,
-
-        // Core CS
-        'Data Structures': Boxes,
-        'Algorithms': Cpu,
-        'OOP': Boxes,
-        'REST APIs': Plug,
-
-        // AI / ML
-        'CNNs': Layers,
-        'Scikit-learn': Brain,
-        'TensorFlow': Network,
-        'Keras': Network,
-        'Model Evaluation': Activity,
-        'OpenCV': Eye,
-        'MediaPipe': Hand,
-
-        // Data
-        'Pandas': BarChart,
-        'NumPy': PieChart,
-        'Matplotlib': TrendingUp,
-        'Power BI': BarChart,
-        'Excel': FileSpreadsheet,
-        'MS Office': FileText,
-
-        // Tools
-        'Git': GitBranch,
-        'Jupyter Notebook': BookOpen,
-
-        // Generative AI
-        'OpenAI API': Bot,
-        'Gemini API': Sparkles,
-        'Prompt Engineering': MessageSquare,
-
-        // Design Tools
-        'Adobe XD': Palette,
-        'Photoshop': ImageIcon,
-        'Canva': Palette,
-
-        // UX Methods
+        // Design & UX
+        'User Research': Search,
+        'Personas & User Journeys': Users,
+        'Information Architecture': Network,
         'Wireframing': Layout,
-        'Prototyping': Monitor,
-        'User Flow': GitBranch,
-        'Persona Creation': Users,
-        'Usability Testing': Search,
-
-        // UI Skills
-        'Layout Design': Layout,
+        'Interactive Prototyping': Monitor,
+        'Usability Testing': MousePointer,
+        'Responsive Design': Smartphone,
+        'Accessibility (WCAG)': Accessibility,
+        'Design Systems': Layers,
+        'Visual Hierarchy': Eye,
         'Typography': Type,
         'Color Theory': Palette,
-        'Visual Hierarchy': Layout,
-        'Responsive Design': Monitor,
+
+        // Tools
+        'Adobe XD': PenTool,
+        'Framer': Monitor,
+        'Webflow': Globe,
+        'Adobe Photoshop': ImageIcon,
+        'Canva': Palette,
+
+        // Soft Skills
+        'Communication & Presentation': MessageSquare,
+        'Problem Solving': Lightbulb,
+        'Feedback-Oriented Mindset': RefreshCw,
+        'Adaptability & Learning': RefreshCw,
+        'Creativity': Sparkles,
     };
 
     // Check for image icon

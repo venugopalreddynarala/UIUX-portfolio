@@ -77,12 +77,12 @@ export default function Contact() {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="contact-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Let's build{' '}
-                        <span className="gradient-text">secure digital experiences</span>{' '}
+                        Let&apos;s create{' '}
+                        <span className="gradient-text">beautiful, user-centered experiences</span>{' '}
                         together.
                     </h2>
                     <p className="contact-title text-xl text-mutedgray max-w-2xl mx-auto">
-                        Have a project in mind or want to discuss AI solutions? I'd love to hear from you.
+                        Have a design project in mind or looking for a UI/UX collaborator? I&apos;d love to hear from you.
                     </p>
                 </div>
 

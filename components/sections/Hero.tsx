@@ -27,22 +27,31 @@ export default function Hero() {
                 ease: 'power3.out',
             });
 
-            // CTA buttons - always visible (no animation)
-            // gsap.from('.hero-cta', {
-            //     y: 30,
-            //     opacity: 0,
-            //     duration: 0.6,
-            //     delay: 0.4,
-            //     stagger: 0.15,
-            //     ease: 'power2.out',
-            // });
-
             gsap.from('.hero-image', {
                 scale: 0.8,
                 opacity: 0,
                 duration: 1.2,
                 delay: 0.3,
                 ease: 'power3.out',
+            });
+
+            // Floating design elements
+            gsap.to('.design-float-1', {
+                y: -15,
+                rotation: 5,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+            });
+
+            gsap.to('.design-float-2', {
+                y: 10,
+                rotation: -3,
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
             });
         }, heroRef);
 
@@ -58,6 +67,22 @@ export default function Hero() {
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl animate-float" />
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
+            {/* Floating UI/UX design elements */}
+            <div className="design-float-1 absolute top-20 right-20 hidden lg:block">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-20">
+                    <rect x="5" y="5" width="50" height="50" rx="8" stroke="#5B7CFF" strokeWidth="2" strokeDasharray="4 4" />
+                    <circle cx="15" cy="15" r="3" fill="#9B5CFF" />
+                    <rect x="12" y="25" width="36" height="4" rx="2" fill="#5B7CFF" opacity="0.5" />
+                    <rect x="12" y="33" width="24" height="4" rx="2" fill="#5B7CFF" opacity="0.3" />
+                </svg>
+            </div>
+            <div className="design-float-2 absolute bottom-32 left-16 hidden lg:block">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-20">
+                    <path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="#9B5CFF" strokeWidth="2" />
+                    <circle cx="25" cy="25" r="6" fill="#5B7CFF" opacity="0.4" />
+                </svg>
+            </div>
+
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
@@ -70,7 +95,7 @@ export default function Hero() {
 
                         {/* Subtext */}
                         <p className="hero-subtitle text-lg md:text-xl text-offwhite/80 mb-8 max-w-xl mx-auto lg:mx-0">
-                            AI & Data Science Engineer specializing in deep learning, computer vision, and scalable AI applications.
+                            UI/UX Designer crafting end-to-end product flows — from user research and wireframes to high-fidelity prototypes. Strong in Figma, Adobe XD &amp; design systems.
                         </p>
 
                         {/* CTAs */}
@@ -85,8 +110,8 @@ export default function Hero() {
                             </MagneticButton>
 
                             <MagneticButton
-                                href="/Venu_Gopal_Reddy_Resume.pdf"
-                                download="Venu_Gopal_Reddy_Resume.pdf"
+                                href="/UIUX_Resume.pdf"
+                                download="Narala_Venu_Gopal_Reddy_UIUX_Resume.pdf"
                                 className="hero-cta px-8 py-4 glass border-2 border-electric/50 text-offwhite rounded-full font-semibold text-lg hover:border-electric hover:bg-electric/10 transition-all duration-300 shadow-lg"
                             >
                                 Download Resume
@@ -108,16 +133,16 @@ export default function Hero() {
                                 </svg>
                             </a>
 
-                            {/* GitHub */}
+                            {/* Portfolio */}
                             <a
-                                href="https://github.com/venugopalreddynarala"
+                                href="https://venugopalreddynarala.in"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 glass border border-electric/30 rounded-full flex items-center justify-center hover:border-electric hover:bg-electric/10 transition-all duration-300 cursor-hover group"
-                                aria-label="GitHub"
+                                aria-label="Portfolio Website"
                             >
-                                <svg className="w-5 h-5 text-offwhite/70 group-hover:text-electric transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                <svg className="w-5 h-5 text-offwhite/70 group-hover:text-electric transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                 </svg>
                             </a>
 
@@ -149,7 +174,7 @@ export default function Hero() {
                             <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[6px] border-electric/60 shadow-2xl shadow-electric/30">
                                 <Image
                                     src="/profile.png"
-                                    alt="Narala Venu Gopal Reddy"
+                                    alt="Narala Venu Gopal Reddy — UI/UX Designer"
                                     fill
                                     className="object-cover object-center scale-125"
                                     priority

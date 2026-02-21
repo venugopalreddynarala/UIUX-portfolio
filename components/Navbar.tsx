@@ -9,7 +9,7 @@ const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
+    { name: 'Design Process', href: '#experience' },
     { name: 'Certifications', href: '#certifications' },
 ];
 
@@ -96,19 +96,17 @@ export default function Navbar() {
                                         e.preventDefault();
                                         scrollToSection(link.href);
                                     }}
-                                    className={`transition-colors cursor-hover relative group ${
-                                        activeSection === link.href
+                                    className={`transition-colors cursor-hover relative group ${activeSection === link.href
                                             ? 'text-electric font-semibold'
                                             : 'text-offwhite/80 hover:text-electric'
-                                    }`}
+                                        }`}
                                     initial={{ opacity: 0, y: -20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-electric transition-all duration-300 ${
-                                        activeSection === link.href ? 'w-full' : 'w-0 group-hover:w-full'
-                                    }`} />
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-electric transition-all duration-300 ${activeSection === link.href ? 'w-full' : 'w-0 group-hover:w-full'
+                                        }`} />
                                 </motion.a>
                             ))}
 
@@ -162,11 +160,10 @@ export default function Navbar() {
                                         e.preventDefault();
                                         scrollToSection(link.href);
                                     }}
-                                    className={`text-2xl font-semibold transition-colors cursor-hover ${
-                                        activeSection === link.href
+                                    className={`text-2xl font-semibold transition-colors cursor-hover ${activeSection === link.href
                                             ? 'text-electric'
                                             : 'text-offwhite hover:text-electric'
-                                    }`}
+                                        }`}
                                     initial={{ opacity: 0, x: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}

@@ -1,0 +1,104 @@
+﻿NARALA VENU GOPAL REDDY
+Phone : +91-9121499852
+Email : naralavenugopalreddy@gmail.com
+Linkedin : venugopalreddynarala
+portfolio : venugopalreddynarala.in
+Profile
+UI/UX Designer with hands-on experience designing end-to-end product flows ù from user research and
+wireframes to high-fidelity prototypes. Built responsive web and mobile interfaces with a focus on usability,
+accessibility, and conversion clarity. Strong in Figma, Adobe XD and design systems. Looking to contribute
+to product-driven teams where design decisions are backed by research and measurable impact.
+Education
+ò Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology 2022ûPresent
+Bachelor of Technology in C.S.E (AI&DS)
+CGPA: 8.0
+ò Chaitanya Junior College
+2020û2022
+Board of Intermediate Education, Andhra Pradesh
+Percentage: 77%
+ò All Saints English Medium School
+2019û2020
+Board of Secondary Education, Andhra Pradesh
+Percentage: 92.6%
+Projects
+ò Food Delivery App UI Design (Mobile App)
+-Designed a multi-screen mobile application flow consisting of Home, Menu, and Checkout screens with a strong
+focus on simplicity, usability, and visual hierarchy. Created wireframes and high-fidelity prototypes in Adobe XD,
+applying principles of color theory, typography, and icon consistency to enhance the overall user experience.
+Showcase: Foodly
+ò Quiz App UI/UX Design
+-Designed an engaging Quiz App interface to enhance user learning and participation.
+Created complete user
+flows and high-fidelity prototypes in Adobe XD, focusing on clarity, usability, and visual consistency.
+Applied
+color psychology, typography hierarchy, and subtle micro-interactions to deliver an intuitive and enjoyable user
+experience.
+Showcase: Quizlio
+ò Portfolio Website UI/UX Design
+-Designed a responsive personal portfolio website to showcase design projects and case studies. Created wireframes
+and high-fidelity mockups in Figma, maintaining a clean, modern, and minimal aesthetic. Applied accessibility
+principles such as proper contrast, spacing, and readable typography to ensure an inclusive and user-friendly expe-
+rience.
+Showcase: Portfolio
+ò Personal Finance Tracker Mobile App
+-Designed a mobile application that helps users monitor income, expenses, and savings with ease. Conducted user
+research to identify budgeting pain points and crafted intuitive navigation flows. Created high-fidelity prototypes
+in Adobe XD, applying consistent design systems, responsive layouts, and accessibility principles to enhance the
+overall user experience.
+Showcase: Finance Tracker
+ò Food Delivery UI Kit û End-to-End Prototyping (Figma)
+-Created interactive prototypes for core user flows including product browsing, cart management, checkout, and
+order tracking. Developed reusable components and a structured design system to ensure consistency, scalability,
+and efficient handoff.
+Showcase: Live Prototype
+Technical Skills And Interests
+DESIGN & UX
+1
+
+---PAGE BREAK---
+ò User Research
+ò Personas, User Journeys & User Flows
+ò Information Architecture
+ò Wireframing (Low- and High-Fidelity)
+ò Interactive Prototyping
+ò Usability Testing
+ò Responsive Web & Mobile Design
+ò Accessibility (WCAG Principles)
+ò Design Systems
+ò Visual Hierarchy
+ò Typography
+ò Color Theory
+TOOLS
+ò Figma
+ò Adobe XD
+ò Framer
+ò Webflow
+ò Adobe Photoshop
+ò Canva
+ò Google Docs
+SOFT SKILLS
+ò Communication Presentation
+ò Problem Solving
+ò Feedback-Oriented Mindset
+ò Adaptability Continuous Learning
+ò Creativity
+Certificates
+ò Google UX Design Professional Certificate
+Google
+ò IBM UI/UX Designer Professional Certificate
+IBM
+ò Capstone Project: Applying UI/UX Design in the Real World
+IBM
+ò UX Research and Information Architecture
+IBM
+ò Introduction to Agile Development and Scrum
+IBM
+ò Generative AI: The Future of UX UI Design
+SkillUp
+Additional Achievements
+ò Created multiple UI/UX Designs.
+ò Organized college-level UI/UX workshops and design challenges
+ò Participated in UX hackathons and interface redesign competitions.
+2
+
+---PAGE BREAK---
