@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --color-graphite: #0B0D10;
-  --color-graphite-light: #1A1D23;
-  --color-electric: #5B7CFF;
-  --color-electric-light: #7A95FF;
-  --color-electric-dark: #3D5FE6;
-  --color-violet: #9B5CFF;
-  --color-violet-light: #B47FFF;
-  --color-violet-dark: #7D3FE6;
-  --color-offwhite: #EDEDED;
-  --color-mutedgray: #9AA0A6;
+  --color-graphite: #0A0A0F;
+  --color-graphite-light: #13131A;
+  --color-surface: #1A1A24;
+  --color-electric: #6C63FF;
+  --color-electric-light: #8B85FF;
+  --color-electric-dark: #4F46E5;
+  --color-accent: #FF6B9D;
+  --color-accent-light: #FF8FB3;
+  --color-teal: #2DD4BF;
+  --color-teal-light: #5EEAD4;
+  --color-violet: #A78BFA;
+  --color-violet-light: #C4B5FD;
+  --color-violet-dark: #7C3AED;
+  --color-offwhite: #F0F0F5;
+  --color-mutedgray: #8B8B9E;
 }
 
 * {
@@ -31,7 +36,6 @@ body {
   color: var(--color-offwhite);
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
-  /* cursor: none; Removed to restore default cursor */
 }
 
 /* Headings with Space Grotesk Font */
@@ -43,28 +47,50 @@ h5,
 h6 {
   font-family: var(--font-heading), var(--font-inter), system-ui, sans-serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   font-style: italic;
+}
+
+/* Design Grid Background — subtle dot pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(108, 99, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Glassmorphism Utilities */
 .glass {
-  background: rgba(26, 29, 35, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(91, 124, 255, 0.1);
+  background: rgba(26, 26, 36, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(108, 99, 255, 0.08);
 }
 
 .glass-strong {
-  background: rgba(26, 29, 35, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(91, 124, 255, 0.2);
+  background: rgba(26, 26, 36, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(108, 99, 255, 0.12);
 }
 
-/* Gradient Text */
+/* Gradient Text — Primary */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-electric), var(--color-violet));
+  background: linear-gradient(135deg, var(--color-electric) 0%, var(--color-accent) 50%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient Text — Teal variant */
+.gradient-text-teal {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-electric));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -82,11 +108,23 @@ h6 {
 
 /* Glow Effects */
 .glow-electric {
-  box-shadow: 0 0 20px rgba(91, 124, 255, 0.3), 0 0 40px rgba(91, 124, 255, 0.1);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.25), 0 0 60px rgba(108, 99, 255, 0.08);
 }
 
 .glow-violet {
-  box-shadow: 0 0 20px rgba(155, 92, 255, 0.3), 0 0 40px rgba(155, 92, 255, 0.1);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.25), 0 0 60px rgba(167, 139, 250, 0.08);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.25), 0 0 60px rgba(255, 107, 157, 0.08);
+}
+
+/* Section Divider — subtle line */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.2), rgba(255, 107, 157, 0.2), transparent);
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 /* Smooth Scroll */
@@ -109,17 +147,17 @@ h6 {
 /* Selection */
 ::selection {
   background-color: var(--color-electric);
-  color: var(--color-graphite);
+  color: white;
 }
 
 ::-moz-selection {
   background-color: var(--color-electric);
-  color: var(--color-graphite);
+  color: white;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -127,12 +165,12 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-electric);
-  border-radius: 4px;
+  background: linear-gradient(180deg, var(--color-electric), var(--color-accent));
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-electric-light);
+  background: linear-gradient(180deg, var(--color-electric-light), var(--color-accent-light));
 }
 
 /* Modal Animations */
@@ -149,12 +187,24 @@ h6 {
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.95) translateY(10px);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -163,24 +213,72 @@ h6 {
 }
 
 .animate-scaleIn {
-  animation: scaleIn 0.3s ease-out;
+  animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Custom Scrollbar for Modal */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: var(--color-electric);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--color-electric-light);
+}
+
+/* Card Hover Shine Effect */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(108, 99, 255, 0.03) 45%,
+    rgba(108, 99, 255, 0.05) 50%,
+    rgba(108, 99, 255, 0.03) 55%,
+    transparent 60%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  transform: rotate(45deg) translateX(100%);
+}
+
+/* Noise Texture Overlay */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.015;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
 }

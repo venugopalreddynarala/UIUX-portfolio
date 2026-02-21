@@ -118,7 +118,7 @@ export default function Certifications() {
                             key={index}
                             onClick={() => handleCertClick(cert)}
                             className={`cert-item group cursor-hover p-6 rounded-xl border transition-all duration-300 cursor-pointer ${cert.highlight
-                                ? 'border-electric bg-electric/5 hover:bg-electric/10 hover:glow-electric'
+                                ? 'border-accent bg-accent/5 hover:bg-accent/10 hover:glow-accent'
                                 : 'border-mutedgray/20 hover:border-electric/50 hover:bg-electric/5'
                                 }`}
                         >

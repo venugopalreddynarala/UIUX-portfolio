@@ -10,29 +10,39 @@ const config: Config = {
         extend: {
             colors: {
                 graphite: {
-                    DEFAULT: '#0B0D10',
-                    light: '#1A1D23',
+                    DEFAULT: '#0A0A0F',
+                    light: '#13131A',
                 },
+                surface: '#1A1A24',
                 electric: {
-                    DEFAULT: '#5B7CFF',
-                    light: '#7A95FF',
-                    dark: '#3D5FE6',
+                    DEFAULT: '#6C63FF',
+                    light: '#8B85FF',
+                    dark: '#4F46E5',
+                },
+                accent: {
+                    DEFAULT: '#FF6B9D',
+                    light: '#FF8FB3',
+                },
+                teal: {
+                    DEFAULT: '#2DD4BF',
+                    light: '#5EEAD4',
                 },
                 violet: {
-                    DEFAULT: '#9B5CFF',
-                    light: '#B47FFF',
-                    dark: '#7D3FE6',
+                    DEFAULT: '#A78BFA',
+                    light: '#C4B5FD',
+                    dark: '#7C3AED',
                 },
-                offwhite: '#EDEDED',
-                mutedgray: '#9AA0A6',
+                offwhite: '#F0F0F5',
+                mutedgray: '#8B8B9E',
             },
             fontFamily: {
                 sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
             },
             animation: {
                 'gradient': 'gradient 8s ease infinite',
-                'glow': 'glow 2s ease-in-out infinite alternate',
+                'glow': 'glow 3s ease-in-out infinite alternate',
                 'float': 'float 6s ease-in-out infinite',
+                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             keyframes: {
                 gradient: {
@@ -45,10 +55,10 @@ const config: Config = {
                 },
                 glow: {
                     '0%': {
-                        'box-shadow': '0 0 20px rgba(91, 124, 255, 0.3), 0 0 40px rgba(155, 92, 255, 0.2)',
+                        'box-shadow': '0 0 20px rgba(108, 99, 255, 0.2), 0 0 60px rgba(167, 139, 250, 0.1)',
                     },
                     '100%': {
-                        'box-shadow': '0 0 30px rgba(91, 124, 255, 0.5), 0 0 60px rgba(155, 92, 255, 0.3)',
+                        'box-shadow': '0 0 30px rgba(108, 99, 255, 0.4), 0 0 80px rgba(255, 107, 157, 0.15)',
                     },
                 },
                 float: {

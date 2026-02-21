@@ -79,7 +79,7 @@ export default function Experience() {
 
                 <div className="relative">
                     {/* Timeline line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-electric via-violet to-electric/20 hidden md:block" />
+                    <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-electric via-accent to-teal/20 hidden md:block" />
 
                     <div className="space-y-12">
                         {designSteps.map((item, index) => (
@@ -120,7 +120,7 @@ export default function Experience() {
                                                 {item.skills.map((skill, i) => (
                                                     <span
                                                         key={i}
-                                                        className="px-3 py-1 text-sm glass rounded-full text-violet border border-violet/20"
+                                                        className="px-3 py-1 text-sm glass rounded-full text-accent border border-accent/20"
                                                     >
                                                         {skill}
                                                     </span>

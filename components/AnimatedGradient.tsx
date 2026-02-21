@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 export default function AnimatedGradient() {
     const gradientRef = useRef<HTMLDivElement>(null);
@@ -14,6 +13,7 @@ export default function AnimatedGradient() {
         let mouseY = 0;
         let currentX = 0;
         let currentY = 0;
+        let animationId: number;
 
         const handleMouseMove = (e: MouseEvent) => {
             mouseX = e.clientX;
@@ -23,25 +23,25 @@ export default function AnimatedGradient() {
         window.addEventListener('mousemove', handleMouseMove);
 
         const animate = () => {
-            // Smooth follow
-            currentX += (mouseX - currentX) * 0.05;
-            currentY += (mouseY - currentY) * 0.05;
+            currentX += (mouseX - currentX) * 0.03;
+            currentY += (mouseY - currentY) * 0.03;
 
             if (gradient) {
                 gradient.style.background = `
-          radial-gradient(circle at ${currentX}px ${currentY}px, rgba(91, 124, 255, 0.15), transparent 50%),
-          radial-gradient(circle at ${window.innerWidth - currentX}px ${currentY}px, rgba(155, 92, 255, 0.15), transparent 50%),
-          radial-gradient(circle at ${currentX}px ${window.innerHeight - currentY}px, rgba(91, 124, 255, 0.1), transparent 50%)
-        `;
+                    radial-gradient(ellipse 600px 400px at ${currentX}px ${currentY}px, rgba(108, 99, 255, 0.08), transparent),
+                    radial-gradient(ellipse 500px 300px at ${window.innerWidth - currentX}px ${currentY + 100}px, rgba(255, 107, 157, 0.06), transparent),
+                    radial-gradient(ellipse 400px 400px at ${currentX * 0.5}px ${window.innerHeight - currentY}px, rgba(45, 212, 191, 0.05), transparent)
+                `;
             }
 
-            requestAnimationFrame(animate);
+            animationId = requestAnimationFrame(animate);
         };
 
         animate();
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
+            cancelAnimationFrame(animationId);
         };
     }, []);
 

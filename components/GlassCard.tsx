@@ -17,7 +17,7 @@ export default function GlassCard({
 
     return (
         <div
-            className={`${baseClass} rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:border-electric/30 ${className}`}
+            className={`${baseClass} card-shine rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:border-electric/30 ${className}`}
         >
             {children}
         </div>

@@ -84,18 +84,18 @@ export default function About() {
                         <p className="text-mutedgray mt-1">CGPA: 8.0</p>
                     </div>
 
-                    <div className="about-line glass p-6 rounded-2xl border border-violet/20">
+                    <div className="about-line glass p-6 rounded-2xl border border-accent/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
-                            <h4 className="text-xl font-bold text-violet">Chaitanya Junior College</h4>
+                            <h4 className="text-xl font-bold text-accent">Chaitanya Junior College</h4>
                             <span className="text-mutedgray">2020 – 2022</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Board of Intermediate Education, Andhra Pradesh</p>
                         <p className="text-mutedgray mt-1">Percentage: 77%</p>
                     </div>
 
-                    <div className="about-line glass p-6 rounded-2xl border border-electric/20">
+                    <div className="about-line glass p-6 rounded-2xl border border-teal/20">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
-                            <h4 className="text-xl font-bold text-electric">All Saints English Medium School</h4>
+                            <h4 className="text-xl font-bold text-teal">All Saints English Medium School</h4>
                             <span className="text-mutedgray">2019 – 2020</span>
                         </div>
                         <p className="text-lg text-offwhite/90">Board of Secondary Education, Andhra Pradesh</p>
@@ -106,8 +106,8 @@ export default function About() {
                 {/* Abstract visual element */}
                 <div className="about-line mt-16 flex gap-4">
                     <div className="w-20 h-1 bg-electric rounded-full" />
-                    <div className="w-32 h-1 bg-violet rounded-full" />
-                    <div className="w-16 h-1 bg-electric rounded-full" />
+                    <div className="w-32 h-1 bg-accent rounded-full" />
+                    <div className="w-16 h-1 bg-teal rounded-full" />
                 </div>
             </div>
         </section>

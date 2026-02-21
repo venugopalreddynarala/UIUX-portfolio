@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-            <body suppressHydrationWarning>
+            <body suppressHydrationWarning className="noise-overlay">
                 <BackgroundAnimation />
                 <AnimatedGradient />
                 <SmoothScroll>
