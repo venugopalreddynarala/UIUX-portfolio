@@ -96,7 +96,7 @@ export default function Experience() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="flex-1 glass p-8 rounded-3xl border border-electric/20 group-hover:border-electric/50 transition-all duration-300 relative overflow-hidden">
+                                    <div className={`flex-1 glass p-8 rounded-3xl border border-electric/20 group-hover:border-electric/50 transition-all duration-300 relative overflow-hidden magic-bento-border ${index % 4 === 0 ? 'magic-bento-electric' : index % 4 === 1 ? 'magic-bento-violet' : index % 4 === 2 ? 'magic-bento-accent' : 'magic-bento-teal'}`}>
                                         {/* Decorative background */}
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-electric/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110" />
 

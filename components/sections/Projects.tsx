@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Palette, Smartphone, Layout, CreditCard, Package } from 'lucide-react';
-import GlassCard from '@/components/GlassCard';
 import ProjectModal from '@/components/ProjectModal';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +16,7 @@ const projects = [
         impact: 'Multi-screen mobile app — Home, Menu & Checkout with intuitive UX',
         tech: ['Adobe XD', 'Wireframing', 'Prototyping', 'Color Theory', 'Typography'],
         gradient: 'from-electric to-violet',
+        borderColor: '#7df9ff',
         icon: Smartphone,
         image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&q=80',
         description: 'Designed a multi-screen mobile application flow consisting of Home, Menu, and Checkout screens with a strong focus on simplicity, usability, and visual hierarchy. Created wireframes and high-fidelity prototypes in Adobe XD, applying principles of color theory, typography, and icon consistency to enhance the overall user experience.',
@@ -44,6 +45,7 @@ const projects = [
         impact: 'Engaging quiz interface with focus on clarity & micro-interactions',
         tech: ['Adobe XD', 'User Flows', 'Prototyping', 'Color Psychology', 'Micro-interactions'],
         gradient: 'from-violet to-electric',
+        borderColor: '#a78bfa',
         icon: Layout,
         image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&q=80',
         description: 'Designed an engaging Quiz App interface to enhance user learning and participation. Created complete user flows and high-fidelity prototypes in Adobe XD, focusing on clarity, usability, and visual consistency. Applied color psychology, typography hierarchy, and subtle micro-interactions to deliver an intuitive and enjoyable user experience.',
@@ -72,6 +74,7 @@ const projects = [
         impact: 'Responsive personal portfolio — clean, modern & accessible',
         tech: ['Figma', 'Wireframing', 'Responsive Design', 'Accessibility', 'Design Systems'],
         gradient: 'from-electric to-violet',
+        borderColor: '#6c63ff',
         icon: Palette,
         image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
         description: 'Designed a responsive personal portfolio website to showcase design projects and case studies. Created wireframes and high-fidelity mockups in Figma, maintaining a clean, modern, and minimal aesthetic. Applied accessibility principles such as proper contrast, spacing, and readable typography to ensure an inclusive and user-friendly experience.',
@@ -100,6 +103,7 @@ const projects = [
         impact: 'Income, expense & savings tracker with intuitive navigation',
         tech: ['Adobe XD', 'User Research', 'Prototyping', 'Design Systems', 'Accessibility'],
         gradient: 'from-violet to-electric',
+        borderColor: '#2dd4bf',
         icon: CreditCard,
         image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
         description: 'Designed a mobile application that helps users monitor income, expenses, and savings with ease. Conducted user research to identify budgeting pain points and crafted intuitive navigation flows. Created high-fidelity prototypes in Adobe XD, applying consistent design systems, responsive layouts, and accessibility principles to enhance the overall user experience.',
@@ -128,6 +132,7 @@ const projects = [
         impact: 'Reusable design system with interactive prototypes in Figma',
         tech: ['Figma', 'Design Systems', 'Interactive Prototyping', 'Component Library', 'Auto Layout'],
         gradient: 'from-electric to-violet',
+        borderColor: '#ff6b9d',
         icon: Package,
         image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
         description: 'Created interactive prototypes for core user flows including product browsing, cart management, checkout, and order tracking. Developed reusable components and a structured design system to ensure consistency, scalability, and efficient handoff.',
@@ -199,13 +204,13 @@ export default function Projects() {
 
                     <div className="space-y-12">
                         {projects.map((project, index) => (
-                            <GlassCard
+                            <div
                                 key={index}
-                                className="project-card group cursor-hover overflow-hidden hover:border-electric/50 transition-all duration-300"
-                                variant="strong"
+                                className="project-card group rounded-3xl"
                             >
                                 <div
-                                    className="grid md:grid-cols-2 gap-8 items-center cursor-pointer"
+                                    className="grid md:grid-cols-2 gap-8 items-center cursor-pointer glass-strong rounded-3xl p-6 md:p-8 hover:border-electric/40 border border-electric/15 transition-all duration-300 magic-bento-border"
+                                    style={{ '--mb-rgb': project.borderColor.replace('#', '').match(/.{1,2}/g)?.map((h) => Number.parseInt(h, 16)).join(', ') || '108, 99, 255' } as CSSProperties}
                                     onClick={() => handleProjectClick(project)}
                                 >
                                     {/* Project Info */}
@@ -246,7 +251,7 @@ export default function Projects() {
                                         </div>
                                     </div>
                                 </div>
-                            </GlassCard>
+                            </div>
                         ))}
                     </div>
                 </div>

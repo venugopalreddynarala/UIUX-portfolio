@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Image from 'next/image';
 import MagneticButton from '@/components/MagneticButton';
+import ProfileCard from '@/components/ProfileCard';
 
 export default function Hero() {
     const heroRef = useRef<HTMLDivElement>(null);
@@ -166,23 +166,24 @@ export default function Hero() {
 
                     {/* Right - Profile Image */}
                     <div className="hero-image relative flex justify-center lg:justify-end">
-                        <div className="relative">
-                            {/* Glow effect behind image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-electric to-violet opacity-40 blur-3xl" />
+                        <div className="relative w-full max-w-[388px]">
+                            <ProfileCard
+                                avatarUrl="/profile.png"
+                                name="Narala Venu Gopal Reddy"
+                                title="UI/UX Designer"
+                                handle="venugopalreddynarala"
+                                status="Available for Work"
+                                contactText="Contact Me"
+                                showUserInfo={false}
+                                enableTilt={true}
+                                enableMobileTilt={true}
+                                grainUrl="/assets/reactbits/grain.webp"
+                                behindGlowEnabled={true}
+                                behindGlowColor="rgba(125, 190, 255, 0.67)"
+                                behindGlowSize="50%"
+                                innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+                            />
 
-                            {/* Image container - enhanced border */}
-                            <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[6px] border-electric/60 shadow-2xl shadow-electric/30">
-                                <Image
-                                    src="/profile.png"
-                                    alt="Narala Venu Gopal Reddy — UI/UX Designer"
-                                    fill
-                                    className="object-cover object-center scale-125"
-                                    priority
-                                    unoptimized
-                                />
-                            </div>
-
-                            {/* Decorative elements */}
                             <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-electric/30 rounded-full" />
                             <div className="absolute -bottom-4 -left-4 w-16 h-16 border-2 border-violet/30 rounded-full" />
                         </div>

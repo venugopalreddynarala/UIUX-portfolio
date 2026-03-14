@@ -75,7 +75,7 @@ export default function About() {
                 <div className="mt-12 space-y-6">
                     <h3 className="about-line text-3xl font-bold text-offwhite mb-6">Education</h3>
 
-                    <div className="about-line glass p-6 rounded-2xl border border-electric/20">
+                    <div className="about-line glass p-6 rounded-2xl border border-electric/20 magic-bento-border magic-bento-electric">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
                             <h4 className="text-xl font-bold text-electric">Bachelor of Technology in CS (AI & Data Science)</h4>
                             <span className="text-mutedgray">2022 – Present</span>
@@ -84,7 +84,7 @@ export default function About() {
                         <p className="text-mutedgray mt-1">CGPA: 8.0</p>
                     </div>
 
-                    <div className="about-line glass p-6 rounded-2xl border border-accent/20">
+                    <div className="about-line glass p-6 rounded-2xl border border-accent/20 magic-bento-border magic-bento-accent">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
                             <h4 className="text-xl font-bold text-accent">Chaitanya Junior College</h4>
                             <span className="text-mutedgray">2020 – 2022</span>
@@ -93,7 +93,7 @@ export default function About() {
                         <p className="text-mutedgray mt-1">Percentage: 77%</p>
                     </div>
 
-                    <div className="about-line glass p-6 rounded-2xl border border-teal/20">
+                    <div className="about-line glass p-6 rounded-2xl border border-teal/20 magic-bento-border magic-bento-teal">
                         <div className="flex flex-col md:flex-row justify-between mb-2">
                             <h4 className="text-xl font-bold text-teal">All Saints English Medium School</h4>
                             <span className="text-mutedgray">2019 – 2020</span>

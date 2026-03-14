@@ -1,12 +1,9 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { X, ZoomIn, ImagePlus } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
+import { ImagePlus, X } from 'lucide-react';
+import CircularGallery from '@/components/CircularGallery';
 
 /**
  * To add your graphic designs:
@@ -24,10 +21,9 @@ const works: { src: string; title: string; category: string }[] = [
 ];
 
 export default function MyWorks() {
-    const sectionRef = useRef<HTMLDivElement>(null);
+    const [filter, setFilter] = useState('All');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [activeWork, setActiveWork] = useState<typeof works[0] | null>(null);
-    const [filter, setFilter] = useState('All');
 
     const categories = ['All', ...Array.from(new Set(works.map(w => w.category)))];
 
@@ -35,26 +31,10 @@ export default function MyWorks() {
         ? works
         : works.filter(w => w.category === filter);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.utils.toArray<HTMLElement>('.work-item').forEach((item) => {
-                gsap.from(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 90%',
-                        toggleActions: 'play none none reverse',
-                    },
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.6,
-                    ease: 'power3.out',
-                    clearProps: 'all',
-                });
-            });
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, [filter]);
+    const galleryItems = filteredWorks.map((work) => ({
+        image: work.src,
+        text: work.title,
+    }));
 
     const openLightbox = (work: typeof works[0]) => {
         setActiveWork(work);
@@ -65,12 +45,12 @@ export default function MyWorks() {
     const closeLightbox = () => {
         setLightboxOpen(false);
         document.body.style.overflow = '';
-        setTimeout(() => setActiveWork(null), 300);
+        setTimeout(() => setActiveWork(null), 240);
     };
 
     return (
         <>
-            <section id="works" ref={sectionRef} className="py-32 px-6">
+            <section id="works" className="py-32 px-6">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center gradient-text">
                         My Works
@@ -97,39 +77,24 @@ export default function MyWorks() {
                         </div>
                     )}
 
-                    {/* Works Grid */}
+                    {/* Circular Gallery */}
                     {filteredWorks.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filteredWorks.map((work, index) => (
-                                <div
-                                    key={index}
-                                    className="work-item group relative rounded-2xl overflow-hidden cursor-pointer card-shine border border-transparent hover:border-electric/30 transition-all duration-300"
-                                    onClick={() => openLightbox(work)}
-                                >
-                                    {/* Image */}
-                                    <div className="relative aspect-[4/3] bg-graphite-light">
-                                        <Image
-                                            src={work.src}
-                                            alt={work.title}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                        />
-                                    </div>
-
-                                    {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-5">
-                                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-400">
-                                            <span className="text-electric text-xs font-semibold uppercase tracking-wider">{work.category}</span>
-                                            <h3 className="text-offwhite text-lg font-bold mt-1">{work.title}</h3>
-                                        </div>
-                                        <div className="absolute top-4 right-4 w-10 h-10 rounded-full glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                                            <ZoomIn className="w-5 h-5 text-offwhite" />
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <>
+                            <div className="h-[560px] md:h-[620px] relative mb-10 rounded-3xl magic-bento-border magic-bento-violet">
+                                <CircularGallery
+                                    items={galleryItems}
+                                    bend={1}
+                                    textColor="#ffffff"
+                                    borderRadius={0.05}
+                                    scrollSpeed={2}
+                                    scrollEase={0.05}
+                                    onItemClick={(index) => {
+                                        const work = filteredWorks[index];
+                                        if (work) openLightbox(work);
+                                    }}
+                                />
+                            </div>
+                        </>
                     ) : (
                         /* Empty State — shown when no works are added yet */
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -149,7 +114,6 @@ export default function MyWorks() {
                 </div>
             </section>
 
-            {/* Lightbox */}
             {lightboxOpen && activeWork && (
                 <div
                     className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fadeIn"
@@ -157,31 +121,36 @@ export default function MyWorks() {
                 >
                     <div className="absolute inset-0 bg-graphite/95 backdrop-blur-md" />
                     <button
+                        aria-label="Close image preview"
                         className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-electric/20 transition-colors"
                         onClick={closeLightbox}
                     >
                         <X className="w-6 h-6 text-offwhite" />
                     </button>
+
                     <div
-                        className="relative max-w-4xl max-h-[85vh] w-full animate-scaleIn"
+                        className="relative z-10 max-w-5xl max-h-[88vh] w-full animate-scaleIn"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="relative w-full h-[75vh] rounded-2xl overflow-hidden">
+                        <div className="relative w-full h-[72vh] rounded-2xl overflow-hidden bg-graphite-light">
                             <Image
                                 src={activeWork.src}
                                 alt={activeWork.title}
                                 fill
                                 className="object-contain"
-                                sizes="90vw"
+                                sizes="95vw"
+                                priority
                             />
                         </div>
-                        <div className="text-center mt-4">
-                            <span className="text-electric text-sm font-semibold uppercase tracking-wider">{activeWork.category}</span>
-                            <h3 className="text-offwhite text-xl font-bold mt-1">{activeWork.title}</h3>
+
+                        <div className="text-center mt-4 px-2">
+                            <p className="text-electric text-sm uppercase tracking-wider font-semibold">{activeWork.category}</p>
+                            <h3 className="text-offwhite text-xl md:text-2xl font-bold mt-1">{activeWork.title}</h3>
                         </div>
                     </div>
                 </div>
             )}
+
         </>
     );
 }

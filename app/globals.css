@@ -296,3 +296,59 @@ body::before {
   pointer-events: none;
   z-index: 1;
 }
+
+/* Magic Bento Style Glowing Border */
+.magic-bento-border {
+  --mb-rgb: 108, 99, 255;
+  position: relative;
+  isolation: isolate;
+}
+
+.magic-bento-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+      260px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgba(var(--mb-rgb), 0.55) 0%,
+      rgba(var(--mb-rgb), 0.28) 28%,
+      rgba(var(--mb-rgb), 0.14) 52%,
+      transparent 72%),
+    linear-gradient(rgba(var(--mb-rgb), 0.65), rgba(var(--mb-rgb), 0.65));
+  z-index: -1;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.magic-bento-border::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+  background: radial-gradient(circle at 20% 20%, rgba(var(--mb-rgb), 0.26), transparent 58%),
+    radial-gradient(circle at 80% 75%, rgba(var(--mb-rgb), 0.2), transparent 58%);
+  filter: blur(14px);
+  opacity: 0.52;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.magic-bento-electric {
+  --mb-rgb: 108, 99, 255;
+}
+
+.magic-bento-violet {
+  --mb-rgb: 167, 139, 250;
+}
+
+.magic-bento-accent {
+  --mb-rgb: 255, 107, 157;
+}
+
+.magic-bento-teal {
+  --mb-rgb: 45, 212, 191;
+}

@@ -80,7 +80,7 @@ export default function Skills() {
                         <GlassCard
                             key={index}
                             className={`skill-card group cursor-hover ${skill.color === 'electric' ? 'hover:glow-electric' : 'hover:glow-violet'
-                                }`}
+                                } magic-bento-border ${skill.color === 'electric' ? 'magic-bento-electric' : 'magic-bento-violet'}`}
                         >
                             <h3 className={`text-2xl font-bold mb-6 ${skill.color === 'electric' ? 'text-electric' : 'text-violet'
                                 }`}>

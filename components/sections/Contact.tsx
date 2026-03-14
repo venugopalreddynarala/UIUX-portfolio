@@ -88,7 +88,7 @@ export default function Contact() {
 
                 <div className="contact-content grid md:grid-cols-2 gap-12">
                     {/* Contact Form */}
-                    <div className="glass p-8 rounded-3xl border border-electric/20">
+                    <div className="glass p-8 rounded-3xl border border-electric/20 magic-bento-border magic-bento-electric">
                         <h3 className="text-2xl font-bold mb-6 text-offwhite">Send a Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
@@ -160,7 +160,7 @@ export default function Contact() {
                     {/* Contact Info & Social Links */}
                     <div className="space-y-8">
                         {/* Contact Information */}
-                        <div className="glass p-8 rounded-3xl border border-violet/20">
+                        <div className="glass p-8 rounded-3xl border border-violet/20 magic-bento-border magic-bento-violet">
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Get in Touch</h3>
                             <div className="space-y-4">
                                 <a
@@ -193,7 +193,7 @@ export default function Contact() {
                         </div>
 
                         {/* Social Links */}
-                        <div className="glass p-8 rounded-3xl border border-electric/20">
+                        <div className="glass p-8 rounded-3xl border border-electric/20 magic-bento-border magic-bento-accent">
                             <h3 className="text-2xl font-bold mb-6 text-offwhite">Connect With Me</h3>
                             <div className="flex flex-col gap-4">
                                 <MagneticButton
